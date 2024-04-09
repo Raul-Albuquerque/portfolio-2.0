@@ -1,0 +1,40 @@
+:root {
+  --border-radius: 20px;
+  --color-bg-black: rgba(11,22,35,0.8);
+  --color-bg-white: rgba(245,245,245,0.92);
+  --color-modal-overlayer: rgba(0,0,0,.7);
+  --color-modal-bg: rgba(11,22,35,0.5);
+  --color-modal-border: rgba(22,39,59,1);
+  --color-yellow: #ffc61a;
+  --color-pink: #CD6799;
+  --color-purple: #a436f0;
+  --color-gray: rgba(124,141,161,1);
+  --color-light-gray: rgba(124,141,161,0.5);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+
+body {
+  background-image: url('/bg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bg-overlayer {
+  width: 100dvw;
+  height: 100dvh;
+  background-color: var(--color-bg-black);
+}
+
+.test {
+  background-image: -webkit-linear-gradient(left, var(--color-yellow), var(--color-pink), var(--color-purple));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
