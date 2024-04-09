@@ -21,20 +21,7 @@
 }
 
 body {
-  background-image: url('/bg.jpg');
+  background-image: url('/static/images/bg.jpg');
   background-repeat: no-repeat;
   background-size: cover;
-}
-
-.bg-overlayer {
-  width: 100dvw;
-  height: 100dvh;
-  background-color: var(--color-bg-black);
-}
-
-.test {
-  background-image: -webkit-linear-gradient(left, var(--color-yellow), var(--color-pink), var(--color-purple));
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
 }

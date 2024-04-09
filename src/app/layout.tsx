@@ -1,13 +1,13 @@
 import type { Metadata } from 'next'
 
 import './globals.css'
-import { coolvetica } from '@/assets/fonts'
+import Providers from './providers'
 
 export const metadata: Metadata = {
   title: 'Raul Albuquerque - Full Stack Developer',
   description: 'Full Stack Developer',
   icons: {
-    icon: '/favicon.svg',
+    icon: 'static/images/favicon.svg',
   },
 }
 
@@ -18,9 +18,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-br">
-      <body className={coolvetica.className}>
-        <div className="bg-overlayer">{children}</div>
-      </body>
+      <Providers>{children}</Providers>
     </html>
   )
 }
