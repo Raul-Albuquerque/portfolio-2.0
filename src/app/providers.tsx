@@ -6,6 +6,7 @@ import { coolvetica } from '@/assets/fonts'
 import darkTheme from '@/themes/dark'
 import lightTheme from '@/themes/light'
 import { Header } from '@/components/Header'
+import { Navbar } from '@/components/Navbar'
 
 const Providers = ({ children }) => {
   const [isDarkTheme, setIsDarkTheme] = useState(true)
@@ -20,6 +21,7 @@ const Providers = ({ children }) => {
         <BgOverlay>
           <Header themeSwitch={switchTheme} isDarkTheme={isDarkTheme} />
           {children}
+          <Navbar />
         </BgOverlay>
       </body>
     </ThemeProvider>

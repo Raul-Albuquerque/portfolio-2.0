@@ -1,5 +1,4 @@
-'use client'
-
+import { CustomLink } from '../Links'
 import * as s from './styles'
 
 type Props = {
@@ -10,7 +9,9 @@ type Props = {
 export const Header = (props: Props) => {
   return (
     <s.Header>
-      <s.Logo href="/">Raul Albuquerque</s.Logo>
+      <CustomLink url="/" linkType="logo">
+        Raul Albuquerque
+      </CustomLink>
       {props.isDarkTheme ? (
         <s.ThemeSwitcher
           onClick={props.themeSwitch}

@@ -1,6 +1,5 @@
 'use client'
 
-import Link from 'next/link'
 import styled from 'styled-components'
 
 export const Header = styled.header`
@@ -11,19 +10,6 @@ export const Header = styled.header`
   display: flex;
   align-items: center;
   justify-content: space-between;
-`
-
-export const Logo = styled(Link)`
-  font-size: 32px;
-  background-image: -webkit-linear-gradient(
-    left,
-    var(--color-yellow),
-    var(--color-pink),
-    var(--color-purple)
-  );
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
 `
 
 export const ThemeSwitcher = styled.img`
