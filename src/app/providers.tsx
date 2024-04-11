@@ -10,18 +10,28 @@ import { Footer } from '@/components/Footer'
 
 const Providers = ({ children }) => {
   const [isDarkTheme, setIsDarkTheme] = useState(true)
+  const [isEn, setIsEn] = useState(true)
 
   function switchTheme() {
     setIsDarkTheme(!isDarkTheme)
+  }
+
+  function switchLanguage() {
+    setIsEn(!isEn)
   }
 
   return (
     <ThemeProvider theme={isDarkTheme ? darkTheme : lightTheme}>
       <body className={coolvetica.className}>
         <BgOverlay>
-          <Header themeSwitch={switchTheme} isDarkTheme={isDarkTheme} />
+          <Header
+            themeSwitch={switchTheme}
+            isDarkTheme={isDarkTheme}
+            languageSwitch={switchLanguage}
+            isEn={isEn}
+          />
           {children}
-          <Footer />
+          <Footer isEn={isEn} />
         </BgOverlay>
       </body>
     </ThemeProvider>
