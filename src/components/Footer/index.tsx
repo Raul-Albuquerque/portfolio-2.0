@@ -5,52 +5,55 @@ import * as S from './styles'
 export const Footer = () => {
   return (
     <S.Footer>
-      <S.NavContainer>
-        <li>
-          <CustomLink url="/" linkType="nav">
-            INÍCIO
-          </CustomLink>
-        </li>
-        <li>
-          <CustomLink url="/" linkType="nav">
-            SOBRE MIM
-          </CustomLink>
-        </li>
-        <li>
-          <CustomLink url="/" linkType="nav">
-            PROJETOS
-          </CustomLink>
-        </li>
-        <li>
-          <CustomLink url="/" linkType="nav">
-            EXPERIÊNCIA
-          </CustomLink>
-        </li>
-        <li>
-          <CustomLink url="/" linkType="nav">
-            CONTATO
-          </CustomLink>
-        </li>
-      </S.NavContainer>
+      <nav>
+        <S.NavContainer>
+          <li>
+            <CustomLink url="/" linkType="nav">
+              INÍCIO
+            </CustomLink>
+          </li>
+          <li>
+            <CustomLink url="/" linkType="nav">
+              SOBRE MIM
+            </CustomLink>
+          </li>
+          <li>
+            <CustomLink url="/" linkType="nav">
+              PROJETOS
+            </CustomLink>
+          </li>
+          <li>
+            <CustomLink url="/" linkType="nav">
+              EXPERIÊNCIA
+            </CustomLink>
+          </li>
+          <li>
+            <CustomLink url="/" linkType="nav">
+              CONTATO
+            </CustomLink>
+          </li>
+        </S.NavContainer>
+      </nav>
+
       <S.SocialContainer>
         <li>
           <S.SocialLink href="/">
-            <FaWhatsapp size={24} />
+            <FaWhatsapp size={20} />
           </S.SocialLink>
         </li>
         <li>
           <S.SocialLink href="/">
-            <FaLinkedin size={24} />
+            <FaLinkedin size={20} />
           </S.SocialLink>
         </li>
         <li>
           <S.SocialLink href="/">
-            <FaEnvelope size={24} />
+            <FaEnvelope size={20} />
           </S.SocialLink>
         </li>
         <li>
           <S.SocialLink href="/">
-            <FaGithub size={24} />
+            <FaGithub size={20} />
           </S.SocialLink>
         </li>
       </S.SocialContainer>

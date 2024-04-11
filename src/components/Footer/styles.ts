@@ -25,7 +25,7 @@ export const NavContainer = styled.ul`
   gap: 20px;
   border: 1px solid var(--color-gray);
   border-radius: var(--border-radius);
-  padding: 30px;
+  padding: 24px;
 `
 
 export const SocialContainer = styled.ul`
