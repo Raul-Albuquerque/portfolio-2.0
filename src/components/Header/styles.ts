@@ -12,10 +12,17 @@ export const Header = styled.header`
   justify-content: space-between;
 `
 
-export const ThemeSwitcher = styled.img`
+export const SwitchersContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: end;
+`
+
+export const Switcher = styled.img`
   max-width: 30px;
   width: 100%;
   max-height: 30px;
   height: 100%;
+  margin-left: 20px;
   cursor: pointer;
 `

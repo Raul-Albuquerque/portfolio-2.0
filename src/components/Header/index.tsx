@@ -4,6 +4,8 @@ import * as s from './styles'
 type Props = {
   themeSwitch: () => void
   isDarkTheme: boolean
+  languageSwitch: () => void
+  isEn: boolean
 }
 
 export const Header = (props: Props) => {
@@ -12,17 +14,31 @@ export const Header = (props: Props) => {
       <CustomLink url="/" linkType="logo">
         Raul Albuquerque
       </CustomLink>
-      {props.isDarkTheme ? (
-        <s.ThemeSwitcher
-          onClick={props.themeSwitch}
-          src="/static/images/sun.svg"
-        />
-      ) : (
-        <s.ThemeSwitcher
-          onClick={props.themeSwitch}
-          src="/static/images/moon.svg"
-        />
-      )}
+      <s.SwitchersContainer>
+        {props.isEn ? (
+          <s.Switcher
+            onClick={props.languageSwitch}
+            src="/static/images/pt.svg"
+          />
+        ) : (
+          <s.Switcher
+            onClick={props.languageSwitch}
+            src="/static/images/en.svg"
+          />
+        )}
+
+        {props.isDarkTheme ? (
+          <s.Switcher
+            onClick={props.themeSwitch}
+            src="/static/images/sun.svg"
+          />
+        ) : (
+          <s.Switcher
+            onClick={props.themeSwitch}
+            src="/static/images/moon.svg"
+          />
+        )}
+      </s.SwitchersContainer>
     </s.Header>
   )
 }
