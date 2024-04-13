@@ -18,24 +18,24 @@ export const Header = (props: Props) => {
         {props.isEn ? (
           <s.Switcher
             onClick={props.languageSwitch}
-            src="/static/images/pt.svg"
+            src="/static/images/en.svg"
           />
         ) : (
           <s.Switcher
             onClick={props.languageSwitch}
-            src="/static/images/en.svg"
+            src="/static/images/pt.svg"
           />
         )}
 
         {props.isDarkTheme ? (
           <s.Switcher
             onClick={props.themeSwitch}
-            src="/static/images/sun.svg"
+            src="/static/images/moon.svg"
           />
         ) : (
           <s.Switcher
             onClick={props.themeSwitch}
-            src="/static/images/moon.svg"
+            src="/static/images/sun.svg"
           />
         )}
       </s.SwitchersContainer>

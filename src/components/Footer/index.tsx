@@ -72,22 +72,22 @@ export const Footer = (props: Props) => {
       <S.SocialContainer>
         <li>
           <S.SocialLink href="/">
-            <FaWhatsapp size={20} />
+            <FaWhatsapp size={24} />
           </S.SocialLink>
         </li>
         <li>
           <S.SocialLink href="/">
-            <FaLinkedin size={20} />
+            <FaLinkedin size={24} />
           </S.SocialLink>
         </li>
         <li>
           <S.SocialLink href="/">
-            <FaEnvelope size={20} />
+            <FaEnvelope size={24} />
           </S.SocialLink>
         </li>
         <li>
           <S.SocialLink href="/">
-            <FaGithub size={20} />
+            <FaGithub size={24} />
           </S.SocialLink>
         </li>
       </S.SocialContainer>

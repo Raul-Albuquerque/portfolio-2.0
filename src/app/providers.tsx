@@ -1,12 +1,14 @@
 'use client'
 import styled, { ThemeProvider } from 'styled-components'
-import { useState } from 'react'
+import { createContext, useState } from 'react'
 
 import { coolvetica } from '@/assets/fonts'
 import darkTheme from '@/themes/dark'
 import lightTheme from '@/themes/light'
 import { Header } from '@/components/Header'
 import { Footer } from '@/components/Footer'
+
+export const LanguageContext = createContext({})
 
 const Providers = ({ children }) => {
   const [isDarkTheme, setIsDarkTheme] = useState(true)
@@ -30,7 +32,9 @@ const Providers = ({ children }) => {
             languageSwitch={switchLanguage}
             isEn={isEn}
           />
-          {children}
+          <LanguageContext.Provider value={{ isEn, setIsEn }}>
+            {children}
+          </LanguageContext.Provider>
           <Footer isEn={isEn} />
         </BgOverlay>
       </body>
