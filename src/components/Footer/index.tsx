@@ -18,7 +18,7 @@ export const Footer = (props: Props) => {
               </CustomLink>
             </li>
             <li>
-              <CustomLink url="/" linkType="nav">
+              <CustomLink url="/pages/about" linkType="nav">
                 ABOUT
               </CustomLink>
             </li>

@@ -3,9 +3,9 @@
 import { useContext } from 'react'
 
 import { LanguageContext } from '../../app/providers'
+import { Button } from '../Buttons'
 
 import * as S from './styles'
-import { Button } from '../Buttons'
 
 export type Props = {
   type?: 'home' | ''
@@ -59,11 +59,8 @@ export const Main = ({ type, title, children }: Props) => {
         </S.HomeSection>
       ) : (
         <>
-          <h2>{title}</h2>
-          <section>
-            <article>assunto1</article>
-            <article>assunto2</article>
-          </section>
+          <S.PageTitle>{title}</S.PageTitle>
+          {children}
         </>
       )}
     </S.MainContainer>

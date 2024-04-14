@@ -79,3 +79,10 @@ export const BtnContainer = styled.div`
 export const ProfileImage = styled(Image)`
   margin: 0 auto;
 `
+
+export const PageTitle = styled.h2`
+  font-size: 64px;
+  font-weight: 400;
+  color: var(--color-light-gray);
+  margin-bottom: 20px;
+`
