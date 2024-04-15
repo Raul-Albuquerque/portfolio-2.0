@@ -23,7 +23,7 @@ export const Footer = (props: Props) => {
               </CustomLink>
             </li>
             <li>
-              <CustomLink url="/" linkType="nav">
+              <CustomLink url="/pages/projects" linkType="nav">
                 PROJECTS
               </CustomLink>
             </li>
@@ -46,12 +46,12 @@ export const Footer = (props: Props) => {
               </CustomLink>
             </li>
             <li>
-              <CustomLink url="/" linkType="nav">
+              <CustomLink url="/pages/about" linkType="nav">
                 SOBRE MIM
               </CustomLink>
             </li>
             <li>
-              <CustomLink url="/" linkType="nav">
+              <CustomLink url="/pages/projects" linkType="nav">
                 PROJETOS
               </CustomLink>
             </li>

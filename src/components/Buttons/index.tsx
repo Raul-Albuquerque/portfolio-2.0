@@ -1,7 +1,7 @@
 import * as S from './styles'
 
 export type Props = {
-  type: 'primary' | 'secondary'
+  type: 'primary' | 'secondary' | 'tertiary'
   children: string
   url: string
 }
@@ -12,7 +12,13 @@ export const Button = ({ url, type, children }: Props) => {
       {type === 'primary' ? (
         <S.BtnPrimary href={url}>{children}</S.BtnPrimary>
       ) : (
-        <S.BtnSecondary href={url}>{children}</S.BtnSecondary>
+        <>
+          {type === 'secondary' ? (
+            <S.BtnSecondary href={url}>{children}</S.BtnSecondary>
+          ) : (
+            <S.BtnTertiary href={url}>{children}</S.BtnTertiary>
+          )}
+        </>
       )}
     </>
   )

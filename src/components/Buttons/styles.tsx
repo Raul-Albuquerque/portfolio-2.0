@@ -41,3 +41,8 @@ export const BtnSecondary = styled(Link)`
     background-color: var(--color-gray);
   }
 `
+
+export const BtnTertiary = styled(BtnPrimary)`
+  font-size: 10px;
+  padding: 8px 12px;
+`

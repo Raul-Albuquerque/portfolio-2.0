@@ -4,7 +4,6 @@ import { useContext } from 'react'
 
 import { LanguageContext } from '../../app/providers'
 import { Main } from '../Main'
-import Image from 'next/image'
 
 import * as S from './styles'
 

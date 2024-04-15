@@ -8,7 +8,11 @@ import lightTheme from '@/themes/light'
 import { Header } from '@/components/Header'
 import { Footer } from '@/components/Footer'
 
+import { register } from 'swiper/element/bundle'
+
 export const LanguageContext = createContext({})
+
+register()
 
 const Providers = ({ children }) => {
   const [isDarkTheme, setIsDarkTheme] = useState(true)

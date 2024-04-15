@@ -25,3 +25,20 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+.swiper-slide {
+  padding: 40px 60px;
+}
+
+.swiper-button-prev, 
+.swiper-button-next {
+  color: var(--color-gray) !important;
+}
+
+.swiper-pagination-bullet {
+  background-color: var(--color-gray) !important;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: var(--color-yellow) !important;
+}
