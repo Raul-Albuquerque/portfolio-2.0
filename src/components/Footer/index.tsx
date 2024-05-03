@@ -29,7 +29,7 @@ export const Footer = (props: Props) => {
             </li>
             <li>
               <CustomLink url="/" linkType="nav">
-                EXPERIENCE
+                FREELANCES
               </CustomLink>
             </li>
             <li>
@@ -57,7 +57,7 @@ export const Footer = (props: Props) => {
             </li>
             <li>
               <CustomLink url="/" linkType="nav">
-                EXPERIÊNCIA
+                FREELANCES
               </CustomLink>
             </li>
             <li>

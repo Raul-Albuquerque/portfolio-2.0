@@ -1,8 +1,5 @@
-import { Main } from '@/components/Main'
-
-// import { register } from 'swiper/element/bundle'
-// register()
+import CardList from '@/components/CardList'
 
 export default function PageAbout() {
-  return <Main title="PROJECTS" />
+  return <CardList type="projects" />
 }
