@@ -1,18 +1,13 @@
 'use client'
 
-import { useContext } from 'react'
-
-import { LanguageContext } from '../../app/providers'
 import { Main } from '../Main'
 
 import * as S from './styles'
 
 export const About = () => {
-  const { isEn } = useContext(LanguageContext)
 
   return (
     <>
-      {isEn ? (
         <Main type="" title="ABOUT">
           <S.SectionAbout>
             <S.TextAbout>

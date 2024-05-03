@@ -1,32 +1,43 @@
+import { useTransition } from 'react'
 import { CustomLink } from '../Links'
+
 import * as s from './styles'
+import { useLocale } from 'next-intl'
+import { useRouter } from 'next/navigation'
 
 type Props = {
   themeSwitch: () => void
   isDarkTheme: boolean
-  languageSwitch: () => void
-  isEn: boolean
 }
 
 export const Header = (props: Props) => {
+  const [isPending, startTransition] = useTransition()
+  const router = useRouter()
+  const localActive = useLocale()
+
+  const changeLocale = (newLocale: string) => {
+    startTransition(() => {
+      router.replace(`/${newLocale}`)
+    })
+  }
+
   return (
     <s.Header>
       <CustomLink url="/" linkType="logo">
         Raul Albuquerque
       </CustomLink>
       <s.SwitchersContainer>
-        {props.isEn ? (
+        {localActive === 'en' ? (
           <s.Switcher
-            onClick={props.languageSwitch}
             src="/static/images/en.svg"
+            onClick={() => changeLocale('pt-br')}
           />
         ) : (
           <s.Switcher
-            onClick={props.languageSwitch}
             src="/static/images/pt.svg"
+            onClick={() => changeLocale('en')}
           />
         )}
-
         {props.isDarkTheme ? (
           <s.Switcher
             onClick={props.themeSwitch}

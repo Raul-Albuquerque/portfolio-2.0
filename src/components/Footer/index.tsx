@@ -1,72 +1,43 @@
+'use client'
+
+import { useTranslations } from 'next-intl'
 import { FaWhatsapp, FaLinkedin, FaEnvelope, FaGithub } from 'react-icons/fa'
 import { CustomLink } from '../Links'
 import * as S from './styles'
 
-type Props = {
-  isEn: boolean
-}
+export const Footer = () => {
+  const t = useTranslations('Footer')
 
-export const Footer = (props: Props) => {
   return (
     <S.Footer>
       <nav>
-        {props.isEn ? (
-          <S.NavContainer>
-            <li>
-              <CustomLink url="/" linkType="nav">
-                HOME
-              </CustomLink>
-            </li>
-            <li>
-              <CustomLink url="/pages/about" linkType="nav">
-                ABOUT
-              </CustomLink>
-            </li>
-            <li>
-              <CustomLink url="/pages/projects" linkType="nav">
-                PROJECTS
-              </CustomLink>
-            </li>
-            <li>
-              <CustomLink url="/pages/freelances" linkType="nav">
-                FREELANCES
-              </CustomLink>
-            </li>
-            <li>
-              <CustomLink url="/pages/contacts" linkType="nav">
-                CONTACT
-              </CustomLink>
-            </li>
-          </S.NavContainer>
-        ) : (
-          <S.NavContainer>
-            <li>
-              <CustomLink url="/" linkType="nav">
-                INÍCIO
-              </CustomLink>
-            </li>
-            <li>
-              <CustomLink url="/pages/about" linkType="nav">
-                SOBRE MIM
-              </CustomLink>
-            </li>
-            <li>
-              <CustomLink url="/pages/projects" linkType="nav">
-                PROJETOS
-              </CustomLink>
-            </li>
-            <li>
-              <CustomLink url="/pages/freelances" linkType="nav">
-                FREELANCES
-              </CustomLink>
-            </li>
-            <li>
-              <CustomLink url="/pages/contacts" linkType="nav">
-                CONTATO
-              </CustomLink>
-            </li>
-          </S.NavContainer>
-        )}
+        <S.NavContainer>
+          <li>
+            <CustomLink url="/" linkType="nav">
+              {t('home')}
+            </CustomLink>
+          </li>
+          <li>
+            <CustomLink url="/pages/about" linkType="nav">
+              {t('about')}
+            </CustomLink>
+          </li>
+          <li>
+            <CustomLink url="/pages/projects" linkType="nav">
+              {t('projects')}
+            </CustomLink>
+          </li>
+          <li>
+            <CustomLink url="/pages/freelances" linkType="nav">
+              {t('freelances')}
+            </CustomLink>
+          </li>
+          <li>
+            <CustomLink url="/pages/contacts" linkType="nav">
+              {t('contacts')}
+            </CustomLink>
+          </li>
+        </S.NavContainer>
       </nav>
 
       <S.SocialContainer>

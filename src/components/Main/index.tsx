@@ -1,9 +1,7 @@
 'use client'
 
-import { useContext } from 'react'
-
-import { LanguageContext } from '../../app/providers'
 import { Button } from '../Buttons'
+import { useTranslations } from 'next-intl'
 
 import * as S from './styles'
 
@@ -14,7 +12,7 @@ export type Props = {
 }
 
 export const Main = ({ type, title, children }: Props) => {
-  const { isEn } = useContext(LanguageContext)
+  const t = useTranslations('Index')
 
   return (
     <S.MainContainer>
@@ -22,31 +20,17 @@ export const Main = ({ type, title, children }: Props) => {
         <S.HomeSection>
           <S.WelcomeContainer>
             <S.Name>RAUL ALBUQUERQUE</S.Name>
-            {isEn ? (
-              <S.StackContainer>
-                <S.Stack>FULL STACK DEVELOPER</S.Stack>
-                <S.BtnContainer>
-                  <Button url="/" type="primary">
-                    GET IN TOUCH
-                  </Button>
-                  <Button url="/" type="secondary">
-                    MY RESUME
-                  </Button>
-                </S.BtnContainer>
-              </S.StackContainer>
-            ) : (
-              <S.StackContainer>
-                <S.Stack>DESENVOLVEDOR FULL STACK</S.Stack>
-                <S.BtnContainer>
-                  <Button url="/" type="primary">
-                    ENTRAR EM CONTATO
-                  </Button>
-                  <Button url="/" type="secondary">
-                    DOWNLOAD CV
-                  </Button>
-                </S.BtnContainer>
-              </S.StackContainer>
-            )}
+            <S.StackContainer>
+              <S.Stack>{t('title')}</S.Stack>
+              <S.BtnContainer>
+                <Button url="/" type="primary">
+                  {t('getInTouch')}
+                </Button>
+                <Button url="/" type="secondary">
+                  {t('resume')}
+                </Button>
+              </S.BtnContainer>
+            </S.StackContainer>
           </S.WelcomeContainer>
           <S.ImageContainer>
             <S.ProfileImage
