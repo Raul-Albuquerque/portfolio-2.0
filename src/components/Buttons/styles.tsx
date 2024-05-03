@@ -7,6 +7,7 @@ export const BtnPrimary = styled(Link)`
   padding: 14px 24px;
   color: var(--color-dark-blue);
   width: 44%;
+  letter-spacing: 0;
   text-decoration: none;
   background:
     linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5))
