@@ -32,6 +32,7 @@ export const ActionsContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
 `
 
 export const IconsContainer = styled.div`
@@ -39,6 +40,7 @@ export const IconsContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
 `
 
 export const ActionIcon = styled(Link)`
@@ -48,4 +50,31 @@ export const ActionIcon = styled(Link)`
   &:hover {
     color: var(--color-yellow);
   }
+`
+
+export const CardContainerContact = styled(Link)`
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  border: 1px solid var(--color-gray);
+  border-radius: var(--border-radius);
+  color: var(--color-gray);
+  text-decoration: none;
+
+  &:hover {
+    background: linear-gradient(
+      90deg,
+      var(--color-yellow),
+      var(--color-pink),
+      var(--color-purple)
+    );
+    opacity: 0.5;
+    color: var(--color-white);
+  }
+`
+
+export const ContactTitle = styled.h4`
+  font-size: 16px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
 `
