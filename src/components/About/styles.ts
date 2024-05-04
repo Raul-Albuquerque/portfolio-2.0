@@ -19,22 +19,24 @@ export const TextAbout = styled.article`
 `
 
 export const AboutP = styled.p`
-  font-size: 18px;
+  font-size: 16px;
   font-family: roboto, sans-serif;
   font-weight: 500;
-  line-height: 28px;
+  line-height: 24px;
   color: var(--color-gray);
   margin-bottom: 20px;
 `
 
 export const SkillsAbout = styled.article`
-  width: 48%;
   height: 100%;
+  max-width: 460px;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: start;
 `
 export const SkillsImage = styled.img`
+  max-width: 460px;
   width: 100%;
 `
 

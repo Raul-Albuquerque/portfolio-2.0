@@ -1,12 +1,13 @@
 'use client'
 
-import { useTranslations } from 'next-intl'
+import { useTranslations, useLocale } from 'next-intl'
 import { FaWhatsapp, FaLinkedin, FaEnvelope, FaGithub } from 'react-icons/fa'
 import { CustomLink } from '../Links'
 import * as S from './styles'
 
 export const Footer = () => {
-  const t = useTranslations('Footer')
+  const footer = useTranslations('Footer')
+  const localActive = useLocale()
 
   return (
     <S.Footer>
@@ -14,27 +15,27 @@ export const Footer = () => {
         <S.NavContainer>
           <li>
             <CustomLink url="/" linkType="nav">
-              {t('home')}
+              {footer('home')}
             </CustomLink>
           </li>
           <li>
-            <CustomLink url="/pages/about" linkType="nav">
-              {t('about')}
+            <CustomLink url={`/${localActive}/pages/about`} linkType="nav">
+              {footer('about')}
             </CustomLink>
           </li>
           <li>
-            <CustomLink url="/pages/projects" linkType="nav">
-              {t('projects')}
+            <CustomLink url={`/${localActive}/pages/projects`} linkType="nav">
+              {footer('projects')}
             </CustomLink>
           </li>
           <li>
-            <CustomLink url="/pages/freelances" linkType="nav">
-              {t('freelances')}
+            <CustomLink url={`/${localActive}/pages/freelances`} linkType="nav">
+              {footer('freelances')}
             </CustomLink>
           </li>
           <li>
-            <CustomLink url="/pages/contacts" linkType="nav">
-              {t('contacts')}
+            <CustomLink url={`/${localActive}/pages/contacts`} linkType="nav">
+              {footer('contacts')}
             </CustomLink>
           </li>
         </S.NavContainer>

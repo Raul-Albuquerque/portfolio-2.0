@@ -1,6 +1,7 @@
 'use client'
 
 import Image from 'next/image'
+import { useTranslations } from 'next-intl'
 
 import { BsPlusCircleFill } from 'react-icons/bs'
 import { FaWhatsapp, FaLinkedin, FaEnvelope, FaGithub } from 'react-icons/fa'
@@ -14,6 +15,8 @@ export type Props = {
 }
 
 export const Card = ({ type, title }: Props) => {
+  const project = useTranslations('Projects')
+
   return (
     <>
       {type === 'project' ? (
@@ -39,7 +42,7 @@ export const Card = ({ type, title }: Props) => {
               </S.ActionIcon>
             </S.IconsContainer>
             <Button type="tertiary" url="https://fonts.google.com/icons">
-              VER PROJETO
+              {project('ctaProject')}
             </Button>
           </S.ActionsContainer>
         </S.CardContainer>
@@ -48,7 +51,7 @@ export const Card = ({ type, title }: Props) => {
           target="_blank"
           href="https://github.com/Raul-Albuquerque"
         >
-          <S.ContactTitle>Whatsapp</S.ContactTitle>
+          <S.ContactTitle>{title}</S.ContactTitle>
           <FaWhatsapp size={36} />
         </S.CardContainerContact>
       )}

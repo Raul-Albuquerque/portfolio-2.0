@@ -12,14 +12,14 @@ export default function Modal() {
           <BsXCircle height={20} />
         </S.ModalTitle>
         <S.ModalContent>
-          <h5>Techs Utilizadas</h5>
+          <h5>Techs</h5>
           <img
             src="https://skillicons.dev/icons?i=html,css,bootstrap,sass&perline=4"
             alt="html,css,bootstrap,sass"
           />
         </S.ModalContent>
         <S.ModalFooter>
-          <h5>Links Úteis</h5>
+          <h5>Links</h5>
           <div>
             <S.ModalLinks>
               <Link target="_blank" href="https://www.google.com">
