@@ -11,6 +11,7 @@ export const CardListContainer = styled.section`
 
 export const CardListContact = styled.section`
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: start;
   gap: 20px;

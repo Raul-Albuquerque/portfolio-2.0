@@ -61,6 +61,7 @@ export const ActionIcon = styled(Link)`
 `
 
 export const CardContainerContact = styled(Link)`
+  max-width: 180px;
   width: 100%;
   height: 100%;
   padding: 20px;
