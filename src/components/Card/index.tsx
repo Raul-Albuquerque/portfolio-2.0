@@ -12,9 +12,10 @@ import * as S from './styles'
 export type Props = {
   type: 'project' | 'contact'
   title?: string
+  modalHandler?: () => void
 }
 
-export const Card = ({ type, title }: Props) => {
+export const Card = ({ type, title, modalHandler }: Props) => {
   const project = useTranslations('Projects')
 
   return (
@@ -34,9 +35,7 @@ export const Card = ({ type, title }: Props) => {
           </S.ProjectDescription>
           <S.ActionsContainer>
             <S.IconsContainer>
-              <S.ActionIcon href="https://fonts.google.com/icons">
-                <BsPlusCircleFill size={24} />
-              </S.ActionIcon>
+              <BsPlusCircleFill size={24} onClick={modalHandler} />
               <S.ActionIcon href="https://fonts.google.com/icons">
                 <FaGithub size={24} />
               </S.ActionIcon>

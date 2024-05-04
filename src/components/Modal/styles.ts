@@ -11,6 +11,7 @@ export const ModalOverlay = styled.div`
   align-items: center;
   justify-content: center;
   background-color: var(--color-modal-overlayer);
+  cursor: pointer;
 `
 
 export const ModalContainer = styled.div`
@@ -33,6 +34,10 @@ export const ModalTitle = styled.div`
 
   svg {
     cursor: pointer;
+
+    &:hover {
+      color: var(--color-yellow);
+    }
   }
 `
 

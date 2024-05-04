@@ -1,15 +1,19 @@
 import Link from 'next/link'
 import { Button } from '../Buttons'
 import * as S from './styles'
-import { BsXCircle } from 'react-icons/bs'
+import { BsFillXCircleFill } from 'react-icons/bs'
 
-export default function Modal() {
+type Props = {
+  modalHandler: () => void
+}
+
+export default function Modal({ modalHandler }: Props) {
   return (
-    <S.ModalOverlay>
+    <S.ModalOverlay onClick={modalHandler}>
       <S.ModalContainer>
         <S.ModalTitle>
           <h4>Projeto 1</h4>
-          <BsXCircle height={20} />
+          <BsFillXCircleFill height={20} onClick={modalHandler} />
         </S.ModalTitle>
         <S.ModalContent>
           <h5>Techs</h5>

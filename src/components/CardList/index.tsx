@@ -13,9 +13,13 @@ export type props = {
 }
 
 export default function CardList({ type }: props) {
-  const [showModal, setShowModal] = useState(true)
+  const [showModal, setShowModal] = useState(false)
   const projects = useTranslations('Projects')
   const contacts = useTranslations('Contacts')
+
+  const handleModal = () => {
+    setShowModal(!showModal)
+  }
 
   return (
     <>
@@ -23,9 +27,21 @@ export default function CardList({ type }: props) {
         <>
           <Main title={projects('title')}>
             <CardListContainer>
-              <Card type="project" title="Projeto 1" />
-              <Card type="project" title="Projeto 1" />
-              <Card type="project" title="Projeto 1" />
+              <Card
+                type="project"
+                title="Projeto 1"
+                modalHandler={handleModal}
+              />
+              <Card
+                type="project"
+                title="Projeto 1"
+                modalHandler={handleModal}
+              />
+              <Card
+                type="project"
+                title="Projeto 1"
+                modalHandler={handleModal}
+              />
             </CardListContainer>
           </Main>
         </>
@@ -33,9 +49,9 @@ export default function CardList({ type }: props) {
       {type === 'freelances' && (
         <Main title="FREELANCES">
           <CardListContainer>
-            <Card type="project" title="Projeto 1" />
-            <Card type="project" title="Projeto 1" />
-            <Card type="project" title="Projeto 1" />
+            <Card type="project" title="Projeto 1" modalHandler={handleModal} />
+            <Card type="project" title="Projeto 1" modalHandler={handleModal} />
+            <Card type="project" title="Projeto 1" modalHandler={handleModal} />
           </CardListContainer>
         </Main>
       )}
@@ -51,7 +67,7 @@ export default function CardList({ type }: props) {
           </CardListContact>
         </Main>
       )}
-      {showModal && <Modal />}
+      {showModal && <Modal modalHandler={handleModal} />}
     </>
   )
 }
