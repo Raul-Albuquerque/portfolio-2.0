@@ -1,0 +1,27 @@
+{
+  "Index": {
+    "title": "DESENVOLVEDOR FULL STACK",
+    "getInTouch": "ENTRAR EM CONTATO",
+    "resume": "MEU CURRÍCULO"
+  },
+  "About": {
+    "title": "SOBRE",
+    "p1": "Engenheiro de Software em formação, com experiência em Front-End e crescente habilidade em Back-End. Especializado em tecnologias como HTML, CSS, JavaScript, TypeScript e Python, com foco em frameworks como Django, Next.JS, Flask e React.JS. Demonstro minha capacidade em projetos diversos, de sites institucionais a aplicações web complexas.",
+    "p2": "Proficiente em bancos de dados SQL e NoSQL, como PostgreSQL, MySQL e MongoDB, e vivência em Docker para garantir portabilidade e eficiência. Sou bastante comprometido com a aprendizagem contínua e contribuição significativa para equipes, oferecendo criatividade, resolução de problemas e qualidade de código."
+  },
+  "Projects": {
+    "title": "PROJETOS",
+    "ctaProject": "VER PROJETO"
+  },
+  "Contacts": {
+    "title": "CONTATOS",
+    "resume": "CURRÍCULO"
+  },
+  "Footer": {
+    "home": "HOME",
+    "about": "SOBRE MIM",
+    "projects": "PROJETOS",
+    "freelances": "FREELANCES",
+    "contacts": "CONTATOS"
+  }
+}

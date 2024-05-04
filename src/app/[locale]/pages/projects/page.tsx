@@ -1,5 +1,5 @@
 import CardList from '@/components/CardList'
 
-export default function PageAbout() {
+export default function PageProjects() {
   return <CardList type="projects" />
 }

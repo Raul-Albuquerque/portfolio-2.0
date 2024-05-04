@@ -1,0 +1,27 @@
+{
+  "Index": {
+    "title": "FULL STACK DEVELOPER",
+    "getInTouch": "GET IN TOUCH",
+    "resume": "MY RESUME"
+  },
+  "About": {
+    "title": "ABOUT",
+    "p1": "Software engineer in progress, with experience in Front-End and growing proficiency in Back-End development. Specialized in technologies such as HTML, CSS, JavaScript, TypeScript, and Python, with a focus on frameworks like Django, Next.JS, Flask, and React.JS. I demonstrate my ability in diverse projects, ranging from institutional websites to complex web applications.",
+    "p2": "Proficient in SQL and NoSQL databases like PostgreSQL, MySQL and MongoDB, with experience in Docker to ensure portability and efficiency. I am highly committed to continuous learning and making significant contributions to teams, offering creativity, problem-solving skills, and code quality."
+  },
+  "Projects": {
+    "title": "PROJECTS",
+    "ctaProject": "SEE PROJECT"
+  },
+  "Contacts": {
+    "title": "CONTACTS",
+    "resume": "RESUME"
+  },
+  "Footer": {
+    "home": "HOME",
+    "about": "ABOUT",
+    "projects": "PROJECTS",
+    "freelances": "FREELANCES",
+    "contacts": "CONTACT"
+  }
+}

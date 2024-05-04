@@ -1,6 +1,7 @@
 'use client'
 
 import Image from 'next/image'
+import { useTranslations } from 'next-intl'
 
 import { BsPlusCircleFill } from 'react-icons/bs'
 import { FaWhatsapp, FaLinkedin, FaEnvelope, FaGithub } from 'react-icons/fa'
@@ -11,9 +12,12 @@ import * as S from './styles'
 export type Props = {
   type: 'project' | 'contact'
   title?: string
+  modalHandler?: () => void
 }
 
-export const Card = ({ type, title }: Props) => {
+export const Card = ({ type, title, modalHandler }: Props) => {
+  const project = useTranslations('Projects')
+
   return (
     <>
       {type === 'project' ? (
@@ -31,15 +35,13 @@ export const Card = ({ type, title }: Props) => {
           </S.ProjectDescription>
           <S.ActionsContainer>
             <S.IconsContainer>
-              <S.ActionIcon href="https://fonts.google.com/icons">
-                <BsPlusCircleFill size={24} />
-              </S.ActionIcon>
+              <BsPlusCircleFill size={24} onClick={modalHandler} />
               <S.ActionIcon href="https://fonts.google.com/icons">
                 <FaGithub size={24} />
               </S.ActionIcon>
             </S.IconsContainer>
             <Button type="tertiary" url="https://fonts.google.com/icons">
-              VER PROJETO
+              {project('ctaProject')}
             </Button>
           </S.ActionsContainer>
         </S.CardContainer>
@@ -48,7 +50,7 @@ export const Card = ({ type, title }: Props) => {
           target="_blank"
           href="https://github.com/Raul-Albuquerque"
         >
-          <S.ContactTitle>Whatsapp</S.ContactTitle>
+          <S.ContactTitle>{title}</S.ContactTitle>
           <FaWhatsapp size={36} />
         </S.CardContainerContact>
       )}

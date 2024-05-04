@@ -33,6 +33,14 @@ export const ActionsContainer = styled.div`
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
+
+  svg {
+    cursor: pointer;
+
+    &:hover {
+      color: var(--color-yellow);
+    }
+  }
 `
 
 export const IconsContainer = styled.div`
