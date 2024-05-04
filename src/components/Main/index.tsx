@@ -19,7 +19,7 @@ export const Main = ({ type, title, children }: Props) => {
       {type === 'home' ? (
         <S.HomeSection>
           <S.WelcomeContainer>
-            <S.Name>RAUL ALBUQUERQUE</S.Name>
+            <S.Name>{t('name')}</S.Name>
             <S.StackContainer>
               <S.Stack>{t('title')}</S.Stack>
               <S.BtnContainer>

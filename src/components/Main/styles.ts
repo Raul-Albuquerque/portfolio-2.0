@@ -40,6 +40,7 @@ export const Name = styled.h3`
   font-size: 18px;
   font-weight: 400;
   color: var(--color-gray);
+  text-transform: uppercase;
 `
 
 export const StackContainer = styled.div`
