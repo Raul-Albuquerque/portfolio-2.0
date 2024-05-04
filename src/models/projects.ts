@@ -1,5 +1,5 @@
-interface Project {
-  id: number
+export interface Project {
+  id: string
   title: string
   image_url: string
   descricao: string
@@ -12,7 +12,7 @@ interface Project {
 
 export const Projects: Project[] = [
   {
-    id: 1,
+    id: '1',
     title: 'Pokédex',
     image_url: '/static/projects/pokedex.png',
     description:
@@ -24,7 +24,7 @@ export const Projects: Project[] = [
     repo_url: 'https://github.com/Raul-Albuquerque/desafio-pokedex',
   },
   {
-    id: 2,
+    id: '2',
     title: 'Y - Twitter Clone',
     image_url: '/static/projects/twitter.png',
     description:
@@ -36,7 +36,7 @@ export const Projects: Project[] = [
     repo_url: 'https://github.com/Raul-Albuquerque/Y_twitter_clone',
   },
   {
-    id: 3,
+    id: '3',
     title: 'My Contacts',
     image_url: '/static/projects/contacts.png',
     description:

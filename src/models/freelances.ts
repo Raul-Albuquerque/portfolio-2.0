@@ -1,5 +1,5 @@
 interface Freelance {
-  id: number
+  id: string
   title: string
   image_url: string
   descricao: string
@@ -11,7 +11,7 @@ interface Freelance {
 
 export const Freelances: Freelance[] = [
   {
-    id: 1,
+    id: '4',
     title: 'Dentiff',
     image_url: '/static/freelances/dentiff.png',
     description: 'Landing page of a company that sells dental products.',
@@ -21,7 +21,7 @@ export const Freelances: Freelance[] = [
     deploy_url: 'https://www.dentiffdental.com.br/',
   },
   {
-    id: 2,
+    id: '5',
     title: 'Barra do Corumbá',
     image_url: '/static/freelances/barra.png',
     description:
@@ -32,7 +32,7 @@ export const Freelances: Freelance[] = [
     deploy_url: 'https://barradocorumba.com.br/',
   },
   {
-    id: 3,
+    id: '6',
     title: 'Oxente Passeios',
     image_url: '/static/freelances/oxente.png',
     description: 'Landing page of a tourism company specialized in boat trips.',

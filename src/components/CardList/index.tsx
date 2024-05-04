@@ -12,8 +12,11 @@ import {
   BsEnvelopeFill,
   BsGithub,
 } from 'react-icons/bs'
-import { useTranslations } from 'next-intl'
+import { useLocale, useTranslations } from 'next-intl'
 import { useState } from 'react'
+import { Dev } from '@/models/developer'
+import { Projects } from '@/models/projects'
+import { Freelances } from '@/models/freelances'
 
 export type props = {
   type: 'projects' | 'freelances' | 'contacts'
@@ -21,11 +24,14 @@ export type props = {
 
 export default function CardList({ type }: props) {
   const [showModal, setShowModal] = useState(false)
+  const [modalId, setModalId] = useState('')
   const projects = useTranslations('Projects')
   const contacts = useTranslations('Contacts')
+  const localActive = useLocale()
 
-  const handleModal = () => {
+  const handleModal = (id: string) => {
     setShowModal(!showModal)
+    setModalId(id)
   }
 
   return (
@@ -34,33 +40,22 @@ export default function CardList({ type }: props) {
         <>
           <Main title={projects('title')}>
             <CardListContainer>
-              <Card
-                type="project"
-                title="Pokédex"
-                modalHandler={handleModal}
-                imageUrl="/static/projects/pokedex.png"
-                description="Web Application about Pokémons with a lot of features, using the PokéAPI."
-                repourl="https://github.com/Raul-Albuquerque/meus_contatos_react"
-                projecturl="https://desafio-pokedex-neon.vercel.app/"
-              />
-              <Card
-                type="project"
-                title="Y - Twitter Clone"
-                modalHandler={handleModal}
-                imageUrl="/static/projects/twitter.png"
-                description="This is a robust project that replicates various functionalities of Twitter."
-                repourl="https://github.com/Raul-Albuquerque/meus_contatos_react"
-                projecturl="https://desafio-pokedex-neon.vercel.app/"
-              />
-              <Card
-                type="project"
-                title="My Contacts"
-                modalHandler={handleModal}
-                imageUrl="/static/projects/contacts.png"
-                description="Sort of an agenda that allows the user to add name, email, phone, and avatar."
-                repourl="https://github.com/Raul-Albuquerque/meus_contatos_react"
-                projecturl="https://desafio-pokedex-neon.vercel.app/"
-              />
+              {Projects.map((project) => (
+                <Card
+                  key={project.id}
+                  type="project"
+                  title={project.title}
+                  modalHandler={() => handleModal(project.id)}
+                  imageUrl={project.image_url}
+                  description={
+                    localActive === 'en'
+                      ? project.description
+                      : project.descricao
+                  }
+                  repourl={project.repo_url}
+                  projecturl={project.deploy_url}
+                />
+              ))}
             </CardListContainer>
           </Main>
         </>
@@ -68,30 +63,21 @@ export default function CardList({ type }: props) {
       {type === 'freelances' && (
         <Main title="FREELANCES">
           <CardListContainer>
-            <Card
-              type="project"
-              title="Dentiff"
-              modalHandler={handleModal}
-              imageUrl="/static/freelances/dentiff.png"
-              description="Landing page of a company that sells dental products."
-              projecturl="https://desafio-pokedex-neon.vercel.app/"
-            />
-            <Card
-              type="project"
-              title="Barra do Corumbá"
-              modalHandler={handleModal}
-              imageUrl="/static/freelances/barra.png"
-              description="Landing page of a tourism company that offers a wide range of travel services."
-              projecturl="https://desafio-pokedex-neon.vercel.app/"
-            />
-            <Card
-              type="project"
-              title="Oxente Passeios"
-              modalHandler={handleModal}
-              imageUrl="/static/freelances/oxente.png"
-              description="Landing page of a tourism company specialized in boat trips."
-              projecturl="https://desafio-pokedex-neon.vercel.app/"
-            />
+            {Freelances.map((freelance) => (
+              <Card
+                key={freelance.id}
+                type="project"
+                title={freelance.title}
+                modalHandler={() => handleModal(freelance.id)}
+                imageUrl={freelance.image_url}
+                description={
+                  localActive === 'en'
+                    ? freelance.description
+                    : freelance.descricao
+                }
+                projecturl={freelance.deploy_url}
+              />
+            ))}
           </CardListContainer>
         </Main>
       )}
@@ -102,36 +88,36 @@ export default function CardList({ type }: props) {
               type="contact"
               title="whatsapp"
               icon={<BsWhatsapp size={36} />}
-              navigateTo="https://github.com/Raul-Albuquerque"
+              navigateTo={Dev.whatsapp_url}
             />
             <Card
               type="contact"
               title="linkedin"
               icon={<BsLinkedin size={36} />}
-              navigateTo="https://github.com/Raul-Albuquerque"
+              navigateTo={Dev.linkedin_url}
             />
             <Card
               type="contact"
               title="e-mail"
               icon={<BsEnvelopeFill size={36} />}
-              navigateTo="https://github.com/Raul-Albuquerque"
+              navigateTo={Dev.email_url}
             />
             <Card
               type="contact"
               title="github"
               icon={<BsGithub size={36} />}
-              navigateTo="https://github.com/Raul-Albuquerque"
+              navigateTo={Dev.github_url}
             />
             <Card
               type="contact"
               title={contacts('resume')}
               icon={<BsDownload size={36} />}
-              navigateTo="https://github.com/Raul-Albuquerque"
+              navigateTo={localActive === 'en' ? Dev.resume_url : Dev.cv_url}
             />
           </CardListContact>
         </Main>
       )}
-      {showModal && <Modal modalHandler={handleModal} />}
+      {showModal && <Modal modalHandler={handleModal} projectId={modalId} />}
     </>
   )
 }

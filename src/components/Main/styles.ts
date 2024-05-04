@@ -57,6 +57,7 @@ export const Stack = styled.h2`
   letter-spacing: 2px;
   height: 100%;
   text-align: center;
+  text-transform: uppercase;
   background-image: -webkit-linear-gradient(
     left,
     var(--color-yellow),

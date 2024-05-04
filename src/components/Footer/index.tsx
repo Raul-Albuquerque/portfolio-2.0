@@ -8,6 +8,7 @@ import {
   BsGithub,
 } from 'react-icons/bs'
 import { CustomLink } from '../Links'
+import { Dev } from '@/models/developer'
 import * as S from './styles'
 
 export const Footer = () => {
@@ -48,22 +49,22 @@ export const Footer = () => {
 
       <S.SocialContainer>
         <li>
-          <S.SocialLink href="/">
+          <S.SocialLink target="_blank" href={Dev.whatsapp_url}>
             <BsWhatsapp size={24} />
           </S.SocialLink>
         </li>
         <li>
-          <S.SocialLink href="/">
+          <S.SocialLink target="_blank" href={Dev.linkedin_url}>
             <BsLinkedin size={24} />
           </S.SocialLink>
         </li>
         <li>
-          <S.SocialLink href="/">
+          <S.SocialLink target="_blank" href={Dev.email_url}>
             <BsEnvelopeFill size={24} />
           </S.SocialLink>
         </li>
         <li>
-          <S.SocialLink href="/">
+          <S.SocialLink target="_blank" href={Dev.github_url}>
             <BsGithub size={24} />
           </S.SocialLink>
         </li>

@@ -16,10 +16,10 @@ interface Developer {
   github_url: string
 }
 
-export const Raul: Developer = {
+export const Dev: Developer = {
   full_name: 'Raul Albuquerque',
-  stack_pt: 'Full Stack Developer',
-  stack_en: 'Desenvolvedor Full Stack',
+  stack_pt: 'Desenvolvedor Full Stack',
+  stack_en: 'Full Stack Developer',
   sobre1:
     'Engenheiro de Software em formação, com experiência em Front-End e crescente habilidade em Back-End. Especializado em tecnologias como HTML, CSS, JavaScript, TypeScript e Python, com foco em frameworks como Django, Next.JS, Flask e React.JS. Demonstro minha capacidade em projetos diversos, de sites institucionais a aplicações web complexas.',
   sobre2:
@@ -30,11 +30,12 @@ export const Raul: Developer = {
     'Proficient in SQL and NoSQL databases like PostgreSQL, MySQL and MongoDB, with experience in Docker to ensure portability and efficiency. I am highly committed to continuous learning and making significant contributions to teams, offering creativity, problem-solving skills, and code quality.',
   skills:
     'html,css,bootstrap,sass,js,ts,py,vue,react,redux,nextjs,styledcomponents,tailwind,nodejs,django,flask,postgres,mysql,mongodb,docker,git',
-  resume_url: 'https://github.com/Raul-Albuquerque',
+  resume_url: '/static/resumes/resume.pdf',
   profile_picture: '/static/images/raul.svg',
-  cv_url: 'https://github.com/Raul-Albuquerque',
-  whatsapp_url: 'https://github.com/Raul-Albuquerque',
-  linkedin_url: 'https://github.com/Raul-Albuquerque',
-  email_url: 'https://github.com/Raul-Albuquerque',
+  cv_url: '/static/resumes/cv.pdf',
+  whatsapp_url:
+    'https://wa.me/5581997080397?text=Oi,%20vim%20pelo%20seu%20site.',
+  linkedin_url: 'https://linkedin.com/in/dev-raul-albuquerque',
+  email_url: 'mailto:raulmalbuquerque2014@gmail.com',
   github_url: 'https://github.com/Raul-Albuquerque',
 }

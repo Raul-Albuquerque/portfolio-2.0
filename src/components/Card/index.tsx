@@ -39,7 +39,7 @@ export const Card = ({
         <S.CardContainer>
           <S.ProjectTitle>{title}</S.ProjectTitle>
           {imageUrl && (
-            <Image src={imageUrl} width={220} height={130} alt={title} />
+            <Image src={imageUrl} width={220} height={130} alt={title || ''} />
           )}
           {description && (
             <S.ProjectDescription>{description}</S.ProjectDescription>
@@ -53,13 +53,13 @@ export const Card = ({
                 </S.ActionIcon>
               )}
             </S.IconsContainer>
-            <Button type="tertiary" url={projecturl}>
+            <Button type="tertiary" url={projecturl || '/'}>
               {project('ctaProject')}
             </Button>
           </S.ActionsContainer>
         </S.CardContainer>
       ) : (
-        <S.CardContainerContact target="_blank" href={navigateTo}>
+        <S.CardContainerContact target="_blank" href={navigateTo || '/'}>
           <S.ContactTitle>{title}</S.ContactTitle>
           {icon}
         </S.CardContainerContact>
