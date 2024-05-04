@@ -1,7 +1,12 @@
 'use client'
 
 import { useTranslations, useLocale } from 'next-intl'
-import { FaWhatsapp, FaLinkedin, FaEnvelope, FaGithub } from 'react-icons/fa'
+import {
+  BsWhatsapp,
+  BsLinkedin,
+  BsEnvelopeFill,
+  BsGithub,
+} from 'react-icons/bs'
 import { CustomLink } from '../Links'
 import * as S from './styles'
 
@@ -44,22 +49,22 @@ export const Footer = () => {
       <S.SocialContainer>
         <li>
           <S.SocialLink href="/">
-            <FaWhatsapp size={24} />
+            <BsWhatsapp size={24} />
           </S.SocialLink>
         </li>
         <li>
           <S.SocialLink href="/">
-            <FaLinkedin size={24} />
+            <BsLinkedin size={24} />
           </S.SocialLink>
         </li>
         <li>
           <S.SocialLink href="/">
-            <FaEnvelope size={24} />
+            <BsEnvelopeFill size={24} />
           </S.SocialLink>
         </li>
         <li>
           <S.SocialLink href="/">
-            <FaGithub size={24} />
+            <BsGithub size={24} />
           </S.SocialLink>
         </li>
       </S.SocialContainer>
