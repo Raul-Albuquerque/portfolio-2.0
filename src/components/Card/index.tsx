@@ -6,6 +6,7 @@ import { useTranslations } from 'next-intl'
 import { BsPlusCircleFill, BsGithub } from 'react-icons/bs'
 
 import { Button } from '../Buttons'
+
 import * as S from './styles'
 
 export type Props = {

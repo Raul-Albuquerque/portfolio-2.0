@@ -1,10 +1,12 @@
 'use client'
-import styled, { ThemeProvider } from 'styled-components'
 import { useState } from 'react'
+import styled, { ThemeProvider } from 'styled-components'
 
 import { coolvetica } from '@/assets/fonts'
+
 import darkTheme from '@/themes/dark'
 import lightTheme from '@/themes/light'
+
 import { Header } from '@/components/Header'
 import { Footer } from '@/components/Footer'
 

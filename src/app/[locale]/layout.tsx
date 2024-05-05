@@ -1,12 +1,15 @@
 import type { Metadata } from 'next'
 import { NextIntlClientProvider, useMessages } from 'next-intl'
 
-import './globals.css'
+import { Dev } from '@/models/developer'
+
 import Providers from './providers'
 
+import './globals.css'
+
 export const metadata: Metadata = {
-  title: 'Raul Albuquerque - Full Stack Developer',
-  description: 'Full Stack Developer',
+  title: `${Dev.full_name} - ${Dev.stack_en}`,
+  description: `${Dev.stack_en}`,
   icons: {
     icon: 'static/images/favicon.svg',
   },

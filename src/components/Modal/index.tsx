@@ -1,18 +1,21 @@
 import Link from 'next/link'
+import { useEffect, useState } from 'react'
+
 import { Button } from '../Buttons'
-import * as S from './styles'
+
 import { BsFillXCircleFill } from 'react-icons/bs'
 
 import { Projects } from '@/models/projects'
 import { Freelances } from '@/models/freelances'
-import { useEffect, useState } from 'react'
+
+import * as S from './styles'
 
 type Props = {
   modalHandler: () => void
   projectId: string
 }
 
-export default function Modal({ modalHandler, projectId }: Props) {
+export const Modal = ({ modalHandler, projectId }: Props) => {
   const [filteredItem, setFilteredItem] = useState([])
 
   const filterItem = (id: string) => {

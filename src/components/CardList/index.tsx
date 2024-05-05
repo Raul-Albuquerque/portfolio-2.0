@@ -1,10 +1,13 @@
 'use client'
 
+import { useState } from 'react'
+
+import { useLocale, useTranslations } from 'next-intl'
+
 import { Main } from '@/components/Main'
 import { Card } from '@/components/Card'
-import Modal from '@/components/Modal'
+import { Modal } from '@/components/Modal'
 
-import { CardListContact, CardListContainer } from './styles'
 import {
   BsDownload,
   BsWhatsapp,
@@ -12,17 +15,18 @@ import {
   BsEnvelopeFill,
   BsGithub,
 } from 'react-icons/bs'
-import { useLocale, useTranslations } from 'next-intl'
-import { useState } from 'react'
+
 import { Dev } from '@/models/developer'
 import { Projects } from '@/models/projects'
 import { Freelances } from '@/models/freelances'
+
+import { CardListContact, CardListContainer } from './styles'
 
 export type props = {
   type: 'projects' | 'freelances' | 'contacts'
 }
 
-export default function CardList({ type }: props) {
+export const CardList = ({ type }: props) => {
   const [showModal, setShowModal] = useState(false)
   const [modalId, setModalId] = useState('')
   const projects = useTranslations('Projects')

@@ -1,10 +1,13 @@
 'use client'
 
 import { useLocale, useTranslations } from 'next-intl'
+
 import { roboto } from '@/assets/fonts'
 
 import { Main } from '../Main'
+
 import { Dev } from '@/models/developer'
+
 import * as S from './styles'
 
 export const About = () => {
