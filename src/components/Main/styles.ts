@@ -10,6 +10,10 @@ export const MainContainer = styled.main`
   @media (min-height: 960px) {
     height: 76dvh;
   }
+
+  @media (max-width: 640px) {
+    width: 80%;
+  }
 `
 
 export const HomeSection = styled.section`
@@ -18,6 +22,11 @@ export const HomeSection = styled.section`
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  @media (max-width: 640px) {
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+  }
 `
 
 export const WelcomeContainer = styled.article`
@@ -26,6 +35,10 @@ export const WelcomeContainer = styled.article`
   display: flex;
   flex-direction: column;
   justify-content: center;
+
+  @media (max-width: 640px) {
+    width: 100%;
+  }
 `
 
 export const ImageContainer = styled.article`
@@ -34,6 +47,10 @@ export const ImageContainer = styled.article`
   display: flex;
   align-items: center;
   justify-content: center;
+
+  @media (max-width: 640px) {
+    display: none;
+  }
 `
 
 export const Name = styled.h3`
@@ -68,6 +85,11 @@ export const Stack = styled.h2`
   background-clip: text;
   -webkit-text-fill-color: transparent;
   padding-bottom: 60px;
+
+  @media (max-width: 640px) {
+    font-size: 36px;
+    padding-bottom: 40px;
+  }
 `
 
 export const BtnContainer = styled.div`
@@ -80,6 +102,11 @@ export const BtnContainer = styled.div`
 
 export const ProfileImage = styled(Image)`
   margin: 0 auto;
+  background-color: red;
+
+  @media (max-width: 640px) {
+    display: none;
+  }
 `
 
 export const PageTitle = styled.h2`
@@ -87,4 +114,8 @@ export const PageTitle = styled.h2`
   font-weight: 400;
   color: var(--color-light-gray);
   margin-bottom: 20px;
+
+  @media (max-width: 640px) {
+    font-size: 40px;
+  }
 `

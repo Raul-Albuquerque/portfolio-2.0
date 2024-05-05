@@ -14,6 +14,10 @@ export const Footer = styled.footer`
   left: 0;
   right: 0;
   margin: 0 auto;
+
+  @media (max-width: 1024px) {
+    width: 90%;
+  }
 `
 
 export const NavContainer = styled.ul`
@@ -26,6 +30,10 @@ export const NavContainer = styled.ul`
   border: 1px solid var(--color-gray);
   border-radius: var(--border-radius);
   padding: 24px;
+
+  @media (max-width: 640px) {
+    padding: 16px;
+  }
 `
 
 export const SocialContainer = styled.ul`
@@ -35,6 +43,10 @@ export const SocialContainer = styled.ul`
   gap: 20px;
   border: 1px solid var(--color-gray);
   border-radius: var(--border-radius);
+
+  @media (max-width: 1024px) {
+    display: none;
+  }
 `
 
 export const SocialLink = styled(Link)`

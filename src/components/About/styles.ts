@@ -8,6 +8,12 @@ export const SectionAbout = styled.section`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-direction: row-reverse;
+
+  @media (max-width: 640px) {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
 `
 export const TextAbout = styled.article`
   width: 48%;
@@ -16,6 +22,10 @@ export const TextAbout = styled.article`
   align-items: start;
   flex-direction: column;
   justify-content: start;
+
+  @media (max-width: 640px) {
+    display: none;
+  }
 `
 
 export const AboutP = styled.p`
@@ -25,6 +35,11 @@ export const AboutP = styled.p`
   line-height: 24px;
   color: var(--color-gray);
   margin-bottom: 20px;
+
+  @media (max-width: 640px) {
+    width: 100%;
+    margin-top: 10px;
+  }
 `
 
 export const SkillsAbout = styled.article`

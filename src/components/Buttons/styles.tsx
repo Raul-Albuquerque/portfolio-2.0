@@ -25,6 +25,10 @@ export const BtnPrimary = styled(Link)`
   &:hover {
     color: var(--color-modal-bg);
   }
+
+  @media (max-width: 640px) {
+    font-size: 12px;
+  }
 `
 
 export const BtnSecondary = styled(Link)`
@@ -40,6 +44,10 @@ export const BtnSecondary = styled(Link)`
   &:hover {
     color: var(--color-dark-blue);
     background-color: var(--color-gray);
+  }
+
+  @media (max-width: 640px) {
+    font-size: 12px;
   }
 `
 

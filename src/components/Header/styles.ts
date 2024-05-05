@@ -10,6 +10,10 @@ export const Header = styled.header`
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  @media (max-width: 1160px) {
+    width: 90%;
+  }
 `
 
 export const SwitchersContainer = styled.div`

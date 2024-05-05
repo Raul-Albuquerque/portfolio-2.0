@@ -1,6 +1,6 @@
 {
   "Index": {
-    "getInTouch": "ENTRAR EM CONTATO",
+    "getInTouch": "FALE COMIGO",
     "resume": "MEU CURRÍCULO"
   },
   "About": {
@@ -16,7 +16,7 @@
   },
   "Footer": {
     "home": "HOME",
-    "about": "SOBRE MIM",
+    "about": "SOBRE",
     "projects": "PROJETOS",
     "freelances": "FREELANCES",
     "contacts": "CONTATOS"
