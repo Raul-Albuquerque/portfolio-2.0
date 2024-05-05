@@ -1,7 +1,8 @@
 'use client'
 
 import { Button } from '../Buttons'
-import { useTranslations } from 'next-intl'
+import { useLocale, useTranslations } from 'next-intl'
+import { Dev } from '@/models/developer'
 
 import * as S from './styles'
 
@@ -13,20 +14,28 @@ export type Props = {
 
 export const Main = ({ type, title, children }: Props) => {
   const t = useTranslations('Index')
+  const localActive = useLocale()
 
   return (
     <S.MainContainer>
       {type === 'home' ? (
         <S.HomeSection>
           <S.WelcomeContainer>
-            <S.Name>{t('name')}</S.Name>
+            <S.Name>{Dev.full_name}</S.Name>
             <S.StackContainer>
-              <S.Stack>{t('title')}</S.Stack>
+              {localActive === 'en' ? (
+                <S.Stack>{Dev.stack_en}</S.Stack>
+              ) : (
+                <S.Stack>{Dev.stack_pt}</S.Stack>
+              )}
               <S.BtnContainer>
-                <Button url="/" type="primary">
+                <Button url={Dev.whatsapp_url} type="primary">
                   {t('getInTouch')}
                 </Button>
-                <Button url="/" type="secondary">
+                <Button
+                  url={localActive === 'en' ? Dev.resume_url : Dev.cv_url}
+                  type="secondary"
+                >
                   {t('resume')}
                 </Button>
               </S.BtnContainer>
@@ -34,10 +43,10 @@ export const Main = ({ type, title, children }: Props) => {
           </S.WelcomeContainer>
           <S.ImageContainer>
             <S.ProfileImage
-              src="/static/images/raul.svg"
+              src={Dev.profile_picture}
               width={380}
               height={420}
-              alt="Picture of the author"
+              alt={`Picture of ${Dev.full_name}`}
             />
           </S.ImageContainer>
         </S.HomeSection>

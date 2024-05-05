@@ -77,7 +77,7 @@ export const CardContainerContact = styled(Link)`
       var(--color-pink),
       var(--color-purple)
     );
-    opacity: 0.5;
+    opacity: 0.7;
     color: var(--color-white);
   }
 `

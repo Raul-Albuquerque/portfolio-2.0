@@ -7,6 +7,13 @@ export const CardListContainer = styled.section`
   align-items: center;
   justify-content: start;
   gap: 80px;
+
+  @media (max-width: 1024px) {
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-bottom: 40px;
+    justify-content: center;
+  }
 `
 
 export const CardListContact = styled.section`
@@ -16,4 +23,9 @@ export const CardListContact = styled.section`
   justify-content: start;
   gap: 20px;
   text-align: center;
+
+  @media (max-width: 640px) {
+    justify-content: center;
+    margin-bottom: 40px;
+  }
 `

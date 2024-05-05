@@ -4,6 +4,7 @@ import { CustomLink } from '../Links'
 import * as s from './styles'
 import { useLocale } from 'next-intl'
 import { useRouter } from 'next/navigation'
+import { Dev } from '@/models/developer'
 
 type Props = {
   themeSwitch: () => void
@@ -24,7 +25,7 @@ export const Header = (props: Props) => {
   return (
     <s.Header>
       <CustomLink url="/" linkType="logo">
-        Raul Albuquerque
+        {Dev.full_name}
       </CustomLink>
       <s.SwitchersContainer>
         {localActive === 'en' ? (

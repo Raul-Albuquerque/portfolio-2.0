@@ -1,28 +1,32 @@
 'use client'
 
-import { useTranslations } from 'next-intl'
+import { useLocale, useTranslations } from 'next-intl'
+
+import { roboto } from '@/assets/fonts'
 
 import { Main } from '../Main'
+
+import { Dev } from '@/models/developer'
 
 import * as S from './styles'
 
 export const About = () => {
   const about = useTranslations('About')
+  const localActive = useLocale()
 
   return (
     <Main type="" title={about('title')}>
       <S.SectionAbout>
-        <S.TextAbout>
-          <S.AboutP>{about('p1')}</S.AboutP>
-          <S.AboutP>{about('p2')}</S.AboutP>
-        </S.TextAbout>
+        <article>
+          <S.AboutP className={roboto.className}>
+            {localActive === 'en' ? Dev.about : Dev.sobre}
+          </S.AboutP>
+        </article>
         <S.SkillsAbout>
-          <S.SkillsAbout>
-            <S.SkillsImage
-              src="https://skillicons.dev/icons?i=html,css,bootstrap,sass,js,ts,py,vue,react,redux,nextjs,styledcomponents,tailwind,nodejs,django,flask,postgres,mysql,mongodb,docker,git,&perline=7"
-              alt="html,css,bootstrap,sass,js,ts,py,vue,react,redux,nextjs,styledcomponents,tailwind,nodejs,django,flask,postgres,mysql,mongodb,docker,git"
-            />
-          </S.SkillsAbout>
+          <S.SkillsImage
+            src={`https://skillicons.dev/icons?i=${Dev.skills},&perline=5`}
+            alt={Dev.skills}
+          />
         </S.SkillsAbout>
       </S.SectionAbout>
     </Main>
