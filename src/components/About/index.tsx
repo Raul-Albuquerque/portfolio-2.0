@@ -1,6 +1,7 @@
 'use client'
 
 import { useLocale, useTranslations } from 'next-intl'
+import { roboto } from '@/assets/fonts'
 
 import { Main } from '../Main'
 import { Dev } from '@/models/developer'
@@ -13,16 +14,17 @@ export const About = () => {
   return (
     <Main type="" title={about('title')}>
       <S.SectionAbout>
+        <article>
+          <S.AboutP className={roboto.className}>
+            {localActive === 'en' ? Dev.about : Dev.sobre}
+          </S.AboutP>
+        </article>
         <S.SkillsAbout>
           <S.SkillsImage
-            src={`https://skillicons.dev/icons?i=${Dev.skills},&perline=7`}
+            src={`https://skillicons.dev/icons?i=${Dev.skills},&perline=5`}
             alt={Dev.skills}
           />
         </S.SkillsAbout>
-        <S.TextAbout>
-          <S.AboutP>{localActive === 'en' ? Dev.about1 : Dev.sobre1}</S.AboutP>
-          <S.AboutP>{localActive === 'en' ? Dev.about2 : Dev.sobre2}</S.AboutP>
-        </S.TextAbout>
       </S.SectionAbout>
     </Main>
   )

@@ -44,7 +44,7 @@ export const SocialContainer = styled.ul`
   border: 1px solid var(--color-gray);
   border-radius: var(--border-radius);
 
-  @media (max-width: 1024px) {
+  @media (max-width: 640px) {
     display: none;
   }
 `

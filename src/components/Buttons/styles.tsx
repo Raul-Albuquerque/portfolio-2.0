@@ -26,7 +26,7 @@ export const BtnPrimary = styled(Link)`
     color: var(--color-modal-bg);
   }
 
-  @media (max-width: 640px) {
+  @media (max-width: 1024px) {
     font-size: 12px;
   }
 `
@@ -46,7 +46,7 @@ export const BtnSecondary = styled(Link)`
     background-color: var(--color-gray);
   }
 
-  @media (max-width: 640px) {
+  @media (max-width: 1024px) {
     font-size: 12px;
   }
 `

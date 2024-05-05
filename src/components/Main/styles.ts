@@ -11,8 +11,8 @@ export const MainContainer = styled.main`
     height: 76dvh;
   }
 
-  @media (max-width: 640px) {
-    width: 80%;
+  @media (max-width: 1024px) {
+    width: 90%;
   }
 `
 
@@ -86,8 +86,8 @@ export const Stack = styled.h2`
   -webkit-text-fill-color: transparent;
   padding-bottom: 60px;
 
-  @media (max-width: 640px) {
-    font-size: 36px;
+  @media (max-width: 1024px) {
+    font-size: 40px;
     padding-bottom: 40px;
   }
 `
@@ -102,7 +102,6 @@ export const BtnContainer = styled.div`
 
 export const ProfileImage = styled(Image)`
   margin: 0 auto;
-  background-color: red;
 
   @media (max-width: 640px) {
     display: none;

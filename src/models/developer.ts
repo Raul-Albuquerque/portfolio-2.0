@@ -2,10 +2,8 @@ interface Developer {
   full_name: string
   stack_pt: string
   stack_en: string
-  about1: string
-  about2: string
-  sobre1: string
-  sobre2: string
+  about: string
+  sobre: string
   skills: string
   resume_url: string
   profile_picture: string
@@ -20,16 +18,12 @@ export const Dev: Developer = {
   full_name: 'Raul Albuquerque',
   stack_pt: 'Desenvolvedor Full Stack',
   stack_en: 'Full Stack Developer',
-  sobre1:
-    'Engenheiro de Software em formação, com experiência em Front-End e crescente habilidade em Back-End. Especializado em tecnologias como HTML, CSS, JavaScript, TypeScript e Python, com foco em frameworks como Django, Next.JS, Flask e React.JS. Demonstro minha capacidade em projetos diversos, de sites institucionais a aplicações web complexas.',
-  sobre2:
-    'Proficiente em bancos de dados SQL e NoSQL, como PostgreSQL, MySQL e MongoDB, e vivência em Docker para garantir portabilidade e eficiência. Sou bastante comprometido com a aprendizagem contínua e contribuição significativa para equipes, oferecendo criatividade, resolução de problemas e qualidade de código.',
-  about1:
-    'Software engineer in progress, with experience in Front-End and growing proficiency in Back-End development. Specialized in technologies such as HTML, CSS, JavaScript, TypeScript, and Python, with a focus on frameworks like Django, Next.JS, Flask, and React.JS. I demonstrate my ability in diverse projects, ranging from institutional websites to complex web applications.',
-  about2:
-    'Proficient in SQL and NoSQL databases like PostgreSQL, MySQL and MongoDB, with experience in Docker to ensure portability and efficiency. I am highly committed to continuous learning and making significant contributions to teams, offering creativity, problem-solving skills, and code quality.',
+  sobre:
+    'Engenheiro de Software em formação, com experiência em Front-End e habilidades crescentes em Back-End. Especializado em HTML, CSS, JavaScript, TypeScript e Python, com foco em frameworks como Django, Next.JS, Flask e React.JS. Proficiente em bancos de dados SQL e NoSQL, como PostgreSQL, MySQL e MongoDB, e experiência em Docker. Comprometido com a aprendizagem contínua e contribuição significativa para equipes, oferecendo criatividade, resolução de problemas e qualidade de código.',
+  about:
+    'Software Engineer in progress, with experience in Front-End and growing Back-End skills. Specialized in HTML, CSS, JavaScript, TypeScript, and Python, focusing on frameworks like Django, Next.JS, Flask, and React.JS. Proficient in SQL and NoSQL databases like PostgreSQL, MySQL, and MongoDB, with experience in Docker. Committed to continuous learning and making significant contributions to teams, offering creativity, problem-solving, and code quality.',
   skills:
-    'html,css,bootstrap,sass,js,ts,py,vue,react,redux,nextjs,styledcomponents,tailwind,nodejs,django,flask,postgres,mysql,mongodb,docker,git',
+    'html,css,bootstrap,sass,js,ts,py,vue,react,redux,nextjs,styledcomponents,tailwind,nodejs,django,flask,postgres,mysql,mongodb,docker',
   resume_url: '/static/resumes/resume.pdf',
   profile_picture: '/static/images/raul.svg',
   cv_url: '/static/resumes/cv.pdf',
