@@ -119,6 +119,8 @@ This project was created by [Raul Albuquerque](http://localhost:3000).
 ## Contact
 For more information of collaborations on the project, please contact [raulmalbuquerque2014@gmail.com](mailto:raulmalbuquerque2014@gmail.com).
 <br><br>
+<hr>
+<br><br>
 
 # <img src="./github/icons/br.svg" /> Portfólio 
 Esse é o meu portfolio e ele foi desenvolvido com Next.js para aprimorar meus conhecimentos nesse framework.
