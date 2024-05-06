@@ -41,18 +41,6 @@ export const WelcomeContainer = styled.article`
   }
 `
 
-export const ImageContainer = styled.article`
-  width: 48%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  @media (max-width: 640px) {
-    display: none;
-  }
-`
-
 export const Name = styled.h3`
   font-size: 18px;
   font-weight: 400;
@@ -100,9 +88,19 @@ export const BtnContainer = styled.div`
   justify-content: space-between;
 `
 
-export const ProfileImage = styled(Image)`
-  margin: 0 auto;
+export const ImageContainer = styled.article`
+  width: 48%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: end;
 
+  @media (max-width: 640px) {
+    display: none;
+  }
+`
+
+export const ProfileImage = styled(Image)`
   @media (max-width: 640px) {
     display: none;
   }
