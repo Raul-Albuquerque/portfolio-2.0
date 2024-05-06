@@ -14,19 +14,19 @@ export const Projects: Project[] = [
   {
     id: '1',
     title: 'Pokédex',
-    image_url: '/static/projects/pokedex.png',
+    image_url: '/static/projects/1.png',
     description:
       'Web Application about Pokémons with a lot of features, using the PokéAPI.',
     descricao:
-      'Aplicação web sobre pokémons com várias funcionalidades, usando a PokéAPI',
-    techs: 'html,css,bootstrap,js,vue,',
+      'Aplicação web sobre pokémons com várias funcionalidades, usando a PokéAPI.',
+    techs: 'html,css,bootstrap,js,vue',
     deploy_url: 'https://desafio-pokedex-neon.vercel.app/',
     repo_url: 'https://github.com/Raul-Albuquerque/desafio-pokedex',
   },
   {
     id: '2',
     title: 'Y - Twitter Clone',
-    image_url: '/static/projects/twitter.png',
+    image_url: '/static/projects/2.png',
     description:
       'This is a robust project that replicates various functionalities of Twitter.',
     descricao:
@@ -38,11 +38,11 @@ export const Projects: Project[] = [
   {
     id: '3',
     title: 'My Contacts',
-    image_url: '/static/projects/contacts.png',
+    image_url: '/static/projects/3.png',
     description:
       'Sort of an agenda that allows the user to add name, e-mail, phone, and avatar.',
     descricao:
-      'Uma espécie de agenda que permite o usuário adicionar nome, e-mail, telefone e avatar',
+      'Uma espécie de agenda que permite o usuário adicionar nome, e-mail, telefone e avatar.',
     techs: 'html,css,ts,react',
     deploy_url: 'https://meus-contatos-react-seven.vercel.app/',
     repo_url: 'https://github.com/Raul-Albuquerque/meus_contatos_react',
