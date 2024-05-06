@@ -6,12 +6,12 @@
 
 ### <a target="_blank" href="https://www.raulalbuquerque.com/">www.raulalbuquerque.com</a>
 
-##### Documentação | Documentation:
-- [English](#installation)
-- [Português](#instalação---português)
+#### Documentation | Documentação:
+- [English](#portfolio)
+- [Português](#portfólio)
 <br><br>
 
-# Portfolio
+# <img src="./github/icons/en.svg" /> Portfolio 
 
 * This is my portfolio and it was developed with Next.js to improve my knowledges about this framework.
 
@@ -42,7 +42,7 @@
 - **"/"** : home page with the name and tech stack of developer.
 - **"/about"**: page with informations about the developer.
 - **"/projects"**: page with the developer's main projects.
-- **"/freelances"**: page with de most revelant real projects as a freelancer.
+- **"/freelances"**: page with the most revelant real projects as a freelancer.
 - **"/contacts"**: contact page.
 
 ## Installation
@@ -120,7 +120,40 @@ This project was created by [Raul Albuquerque](http://localhost:3000).
 For more information of collaborations on the project, please contact [raulmalbuquerque2014@gmail.com](mailto:raulmalbuquerque2014@gmail.com).
 <br><br>
 
-## Instalação - português
+# <img src="./github/icons/br.svg" /> Portfólio 
+Esse é o meu portfolio e ele foi desenvolvido com Next.js para aprimorar meus conhecimentos nesse framework.
+
+Esta aplicação tem diversas funcionalidades como temas claro e escuro, mudança de idioma entre inglês e português, layout responsivo e components com feedback visual.
+
+## Tecnologias:
+[![Techs](https://skillicons.dev/icons?i=html,css,ts,next,react,m&perline=8)](https://skillicons.dev)
+
+## Layout responsivo
+
+<table style="border: none;">
+    <tr>
+        <th style="text-align: center;">Layout no celular</th>
+        <th style="text-align: center;">Layout no tablet</th>
+    </tr>
+    <tr>
+        <td>
+            <img src="./github/images/mobile.png" />
+        </td>
+        <td>
+            <img src="./github/images/tablet.png" />
+        </td>
+    </tr>
+</table>
+
+## Rotas
+
+- **"/"** : página inicial com o nome e a stack do desenvolvedor(a).
+- **"/about"**: página com informações sobre o desenvolvedor(a).
+- **"/projects"**: página com os principais projetos do desenvolvedor(a).
+- **"/freelances"**: página com os projetos reais mais revelantes como freelancer.
+- **"/contacts"**: página de contato.
+
+## Instalação
 
 ### Fork o repositório
 
