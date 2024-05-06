@@ -25,7 +25,7 @@ export const Dev: Developer = {
   skills:
     'html,css,bootstrap,sass,js,ts,py,vue,react,redux,nextjs,styledcomponents,tailwind,nodejs,django,flask,postgres,mysql,mongodb,docker',
   resume_url: '/static/resumes/resume.pdf',
-  profile_picture: '/static/images/raul.svg',
+  profile_picture: '/static/images/profile.svg',
   cv_url: '/static/resumes/cv.pdf',
   whatsapp_url:
     'https://wa.me/5581997080397?text=Oi,%20vim%20pelo%20seu%20site.',

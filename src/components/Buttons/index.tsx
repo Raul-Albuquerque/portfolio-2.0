@@ -10,7 +10,9 @@ export const Button = ({ url, type, children }: Props) => {
   return (
     <>
       {type === 'primary' ? (
-        <S.BtnPrimary href={url}>{children}</S.BtnPrimary>
+        <S.BtnPrimary target="_blank" href={url}>
+          {children}
+        </S.BtnPrimary>
       ) : (
         <>
           {type === 'secondary' ? (

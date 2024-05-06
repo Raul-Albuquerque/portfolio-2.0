@@ -13,7 +13,7 @@ export const Freelances: Freelance[] = [
   {
     id: '4',
     title: 'Dentiff',
-    image_url: '/static/freelances/dentiff.png',
+    image_url: '/static/freelances/1.png',
     description: 'Landing page of a company that sells dental products.',
     descricao:
       'Landing page para uma empresa especializada em produtos odontológicos.',
@@ -23,7 +23,7 @@ export const Freelances: Freelance[] = [
   {
     id: '5',
     title: 'Barra do Corumbá',
-    image_url: '/static/freelances/barra.png',
+    image_url: '/static/freelances/2.png',
     description:
       'Landing page of a tourism company that offers a wide range of travel services.',
     descricao:
@@ -34,7 +34,7 @@ export const Freelances: Freelance[] = [
   {
     id: '6',
     title: 'Oxente Passeios',
-    image_url: '/static/freelances/oxente.png',
+    image_url: '/static/freelances/3.png',
     description: 'Landing page of a tourism company specialized in boat trips.',
     descricao:
       'Landing page de uma empresa de turismo especializada em passeios de barco.',
