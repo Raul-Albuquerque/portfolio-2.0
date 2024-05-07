@@ -1,11 +1,10 @@
 import { DeveloperResponse } from '@/interfaces/developer-data'
 import { useQuery } from '@tanstack/react-query'
-import axios from 'axios'
 
-const API_URL = 'https://api-portfolio-2-0.onrender.com/developers'
+import api from '@/services/api'
 
 const fetchData = async (): Promise<DeveloperResponse> => {
-  const response = await axios.get<DeveloperResponse>(API_URL)
+  const response = await api.get<DeveloperResponse>('/developers')
   return response.data
 }
 

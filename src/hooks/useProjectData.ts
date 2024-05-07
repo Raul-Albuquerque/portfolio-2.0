@@ -1,11 +1,10 @@
 import { ProjectResponse } from '@/interfaces/project-data'
 import { useQuery } from '@tanstack/react-query'
-import axios from 'axios'
 
-const API_URL = 'https://api-portfolio-2-0.onrender.com/projects'
+import api from '@/services/api'
 
 const fetchData = async (): Promise<ProjectResponse> => {
-  const response = await axios.get<ProjectResponse>(API_URL)
+  const response = await api.get<ProjectResponse>('/projects')
   return response.data
 }
 
