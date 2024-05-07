@@ -53,19 +53,21 @@ export const Modal = ({ modalHandler, projectId }: Props) => {
           <h5>Links</h5>
           <div>
             <S.ModalLinks>
-              <Link
-                target="_blank"
-                href={
-                  filteredItem.repo_url
-                    ? filteredItem.repo_url
-                    : 'https://github.com/Raul-Albuquerque'
-                }
-              >
-                <img
-                  src="https://skillicons.dev/icons?i=github"
-                  alt="Acessar o repositório no Github"
-                />
-              </Link>
+              {filteredItem.repo_url && (
+                <Link
+                  target="_blank"
+                  href={
+                    filteredItem.repo_url
+                      ? filteredItem.repo_url
+                      : 'https://github.com/Raul-Albuquerque'
+                  }
+                >
+                  <img
+                    src="https://skillicons.dev/icons?i=github"
+                    alt="Acessar o repositório no Github"
+                  />
+                </Link>
+              )}
             </S.ModalLinks>
             <Button
               type="tertiary"

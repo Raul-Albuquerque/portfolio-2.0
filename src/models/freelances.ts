@@ -27,7 +27,7 @@ export const Freelances: Freelance[] = [
     description:
       'Landing page of a tourism company that offers a wide range of travel services.',
     descricao:
-      'Landing page de uma empresa de turismo que oferece vários passeios.',
+      'Landing page de uma empresa de turismo que oferece diversos passeios diferentes.',
     techs: 'wordpress',
     deploy_url: 'https://barradocorumba.com.br/',
   },

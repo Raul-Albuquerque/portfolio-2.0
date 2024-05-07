@@ -30,7 +30,7 @@ export const Projects: Project[] = [
     description:
       'This is a robust project that replicates various functionalities of Twitter.',
     descricao:
-      'Um projeto robusto que replica várias funcionalidades do Twitter.',
+      'Um projeto robusto que replica várias funcionalidades do Twitter, garantindo uma experiência de rede social.',
     techs: 'html,css,py,django,postgres,docker',
     deploy_url: 'http://raulalbuquerque.pythonanywhere.com/',
     repo_url: 'https://github.com/Raul-Albuquerque/Y_twitter_clone',
