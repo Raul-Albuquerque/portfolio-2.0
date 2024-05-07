@@ -107,22 +107,41 @@ In order to get your data from a API Rest you have to use the rest-api branch.
     npm install
     ```
 
-3. **Access the hooks folder**
+3. **Access the api folder and open the index.ts file**
+
+    <img src="./github/images/services.png" />
+
+4. **Replace the baseURL within the index.ts file**
+
+    ```javascript
+    import axios from 'axios'
+
+    const api = axios.create({
+    baseURL: 'https://api-portfolio-2-0.onrender.com',
+    })
+
+    export default api
+    ``` 
+5. **Open the files within hooks folder**
 
     <img src="./github/images/hooks.png" />
 
-<!-- 4. **Replace the API_URL within the files**
-
+6. **Check the endpoints** 
     ```javascript
-    
-    import { DeveloperResponse } from '@/interfaces/developer-data'
-    import { useQuery } from '@tanstack/react-query'
-    import axios from 'axios'
+    const fetchData = async (): Promise<DeveloperResponse> => {
+    const response = await api.get<DeveloperResponse>('/developers')
+    return response.data
+    }
 
-    // Change here
-    
+    // Make sure that the endpoint of your REST API matches the endpoint of your hooks.
+    ``` 
+7. **Start the development server**
 
-    ``` -->
+    ```shell
+    npm run dev
+    ```
+
+8. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
 ## Contribution
 
@@ -218,21 +237,56 @@ A aplicação possui duas funcionalidades para renderizar os dados:
     ```
 7. Abra [http://localhost:3000](http://localhost:3000) em seu browser.
 
-<!-- ### API Rest
+### Rest API
 
-Para conseguir consumir seus dados de uma API Rest você vai ter que utilizar a branch rest-api.
+Para exibir seus dados consumindo uma API Rest você tem que usar a branch "rest-api".
 
-1. **Clone the rest-api branch**
+1. **Clone a branch "rest-api"**
 
     ```shell
     git clone git@github.com:Raul-Albuquerque/portfolio-2.0.git . --branch 
     rest-api --single-branch
     ```
-2. **Install dependencies**
+2. **Instale as dependências**
 
     ```shell
     npm install
-    ``` -->
+    ```
+
+3. **Acesse a pasta "api" e abra o arquivo index.ts**
+
+    <img src="./github/images/services.png" />
+
+4. **Substitua a baseURL no arquivo index.ts**
+
+    ```javascript
+    import axios from 'axios'
+
+    const api = axios.create({
+    baseURL: 'https://api-portfolio-2-0.onrender.com',
+    })
+
+    export default api
+    ``` 
+5. **Abra os arquivos dentro da pasta hooks**
+
+    <img src="./github/images/hooks.png" />
+
+6. **Confira os endpoints** 
+    ```javascript
+    const fetchData = async (): Promise<DeveloperResponse> => {
+    const response = await api.get<DeveloperResponse>('/developers')
+    return response.data
+    }
+
+    // Verifique se o endpoint da sua Rest API é igual ao endpoint dos seus hooks.
+    ``` 
+7. **Inicie o servidor de desenvolvimento**
+
+    ```shell
+    npm run dev
+    ```
+8. Abra [http://localhost:3000](http://localhost:3000) em seu browser.
 
 ## Contribuições
 Contribuições são bem-vindas! Sinta-se livre para abrir um PR ou informar erros.
