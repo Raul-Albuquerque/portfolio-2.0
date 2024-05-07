@@ -15,9 +15,9 @@
 
 # Portfolio 
 
-* This is my portfolio and it was developed with Next.js to improve my knowledges about this framework.
+This is my portfolio and it was developed with Next.js to improve my knowledges about this framework.
 
-* This application have many features like dark & light theme, language switch between english & portuguese, responsive layout and components with visual feedback.
+This application have many features like dark & light theme, language switch between english & portuguese, responsive layout and components with visual feedback.
 
 ## Techs:
 [![Techs](https://skillicons.dev/icons?i=html,css,ts,next,react,m&perline=8)](https://skillicons.dev)
@@ -128,14 +128,14 @@ In order to get your data from an API REST you have to use the "rest-api" branch
 
     <img src="./github/images/hooks.png" />
 
-6. **Check the endpoints** 
+6. **Check the URL Path** 
     ```javascript
     const fetchData = async (): Promise<DeveloperResponse> => {
     const response = await api.get<DeveloperResponse>('/developers')
     return response.data
     }
 
-    // Make sure that the endpoint of your REST API matches the endpoint of your hooks.
+    // Make sure that the url path of your hooks matches the REST API url path.
     ``` 
 7. **Start the development server**
 
@@ -276,14 +276,14 @@ Para exibir seus dados consumindo uma API REST você tem que usar a branch "rest
 
     <img src="./github/images/hooks.png" />
 
-6. **Confira os endpoints** 
+6. **Confira o path da URL** 
     ```javascript
     const fetchData = async (): Promise<DeveloperResponse> => {
     const response = await api.get<DeveloperResponse>('/developers')
     return response.data
     }
 
-    // Verifique se o endpoint da sua REST API é igual ao endpoint dos seus hooks.
+    // Verifique se o path da url dos seus hooks são iguais ao da sua REST API.
     ``` 
 7. **Inicie o servidor de desenvolvimento**
 
