@@ -6,7 +6,6 @@ interface Freelance {
   description: string
   techs: string
   deploy_url: string
-  layout_url?: string
 }
 
 export const Freelances: Freelance[] = [

@@ -11,12 +11,26 @@ import { Freelances } from '@/models/freelances'
 import * as S from './styles'
 
 type Props = {
-  modalHandler: () => void
+  modalHandler: (id?: string) => void
   projectId: string
 }
 
+type FilteredItem = {
+  title: string
+  techs: string
+  repo_url?: string
+  deploy_url: string
+  id: string
+}
+
 export const Modal = ({ modalHandler, projectId }: Props) => {
-  const [filteredItem, setFilteredItem] = useState([])
+  const [filteredItem, setFilteredItem] = useState<FilteredItem>({
+    title: '',
+    techs: '',
+    repo_url: '',
+    deploy_url: '',
+    id: '',
+  })
 
   const filterItem = (id: string) => {
     const project = Projects.find((item) => item.id === id)
@@ -31,7 +45,7 @@ export const Modal = ({ modalHandler, projectId }: Props) => {
 
   useEffect(() => {
     filterItem(projectId)
-  }, [])
+  })
 
   console.log(filteredItem.id)
 
@@ -44,7 +58,7 @@ export const Modal = ({ modalHandler, projectId }: Props) => {
         </S.ModalTitle>
         <S.ModalContent>
           <h5>Techs</h5>
-          <img
+          <S.TechsImage
             src={`https://skillicons.dev/icons?i=${filteredItem.techs ? filteredItem.techs : 'html,css'}&perline=4`}
             alt={filteredItem.techs ? filteredItem.techs : 'html,css'}
           />
@@ -62,7 +76,7 @@ export const Modal = ({ modalHandler, projectId }: Props) => {
                       : 'https://github.com/Raul-Albuquerque'
                   }
                 >
-                  <img
+                  <S.GithubImage
                     src="https://skillicons.dev/icons?i=github"
                     alt="Acessar o repositório no Github"
                   />

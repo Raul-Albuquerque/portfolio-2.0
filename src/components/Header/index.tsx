@@ -1,4 +1,3 @@
-import { useTransition } from 'react'
 import { CustomLink } from '../Links'
 
 import * as s from './styles'
@@ -12,14 +11,11 @@ type Props = {
 }
 
 export const Header = (props: Props) => {
-  const [isPending, startTransition] = useTransition()
   const router = useRouter()
   const localActive = useLocale()
 
   const changeLocale = (newLocale: string) => {
-    startTransition(() => {
-      router.replace(`/${newLocale}`)
-    })
+    router.replace(`/${newLocale}`)
   }
 
   return (

@@ -1,5 +1,5 @@
 'use client'
-import { useState } from 'react'
+import { ReactNode, useState } from 'react'
 import styled, { ThemeProvider } from 'styled-components'
 
 import { coolvetica } from '@/assets/fonts'
@@ -10,7 +10,11 @@ import lightTheme from '@/themes/light'
 import { Header } from '@/components/Header'
 import { Footer } from '@/components/Footer'
 
-const Providers = ({ children }) => {
+interface ProvidersProps {
+  children: ReactNode
+}
+
+const Providers = ({ children }: ProvidersProps) => {
   const [isDarkTheme, setIsDarkTheme] = useState(true)
 
   function switchTheme() {

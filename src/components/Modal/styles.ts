@@ -67,3 +67,6 @@ export const ModalFooter = styled.div`
     justify-content: space-between;
   }
 `
+
+export const TechsImage = styled.img``
+export const GithubImage = styled(TechsImage)``

@@ -1,8 +1,6 @@
 import Link from 'next/link'
 import styled from 'styled-components'
 
-import { inter } from '../../assets/fonts/index'
-
 export const CardContainer = styled.article`
   max-width: 260px;
   max-height: 320px;
