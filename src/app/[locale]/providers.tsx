@@ -1,6 +1,7 @@
 'use client'
 import { useState } from 'react'
 import styled, { ThemeProvider } from 'styled-components'
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 
 import { coolvetica } from '@/assets/fonts'
 
@@ -12,6 +13,7 @@ import { Footer } from '@/components/Footer'
 
 const Providers = ({ children }) => {
   const [isDarkTheme, setIsDarkTheme] = useState(true)
+  const client = new QueryClient()
 
   function switchTheme() {
     setIsDarkTheme(!isDarkTheme)
@@ -20,11 +22,13 @@ const Providers = ({ children }) => {
   return (
     <ThemeProvider theme={isDarkTheme ? darkTheme : lightTheme}>
       <body className={coolvetica.className}>
-        <BgOverlay>
-          <Header themeSwitch={switchTheme} isDarkTheme={isDarkTheme} />
-          {children}
-          <Footer />
-        </BgOverlay>
+        <QueryClientProvider client={client}>
+          <BgOverlay>
+            <Header themeSwitch={switchTheme} isDarkTheme={isDarkTheme} />
+            {children}
+            <Footer />
+          </BgOverlay>
+        </QueryClientProvider>
       </body>
     </ThemeProvider>
   )

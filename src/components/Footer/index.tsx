@@ -7,13 +7,17 @@ import {
   BsEnvelopeFill,
   BsGithub,
 } from 'react-icons/bs'
-import { CustomLink } from '../Links'
-import { Dev } from '@/models/developer'
+
+import { CustomLink } from '@/components/Links'
+import { useDeveloperData } from '@/hooks/useDeveloperData'
+
 import * as S from './styles'
 
 export const Footer = () => {
   const footer = useTranslations('Footer')
   const localActive = useLocale()
+  const { isLoading, data } = useDeveloperData()
+  const dev = data ? data[0] : null
 
   return (
     <S.Footer>
@@ -47,28 +51,30 @@ export const Footer = () => {
         </S.NavContainer>
       </nav>
 
-      <S.SocialContainer>
-        <li>
-          <S.SocialLink target="_blank" href={Dev.whatsapp_url}>
-            <BsWhatsapp size={24} />
-          </S.SocialLink>
-        </li>
-        <li>
-          <S.SocialLink target="_blank" href={Dev.linkedin_url}>
-            <BsLinkedin size={24} />
-          </S.SocialLink>
-        </li>
-        <li>
-          <S.SocialLink target="_blank" href={Dev.email_url}>
-            <BsEnvelopeFill size={24} />
-          </S.SocialLink>
-        </li>
-        <li>
-          <S.SocialLink target="_blank" href={Dev.github_url}>
-            <BsGithub size={24} />
-          </S.SocialLink>
-        </li>
-      </S.SocialContainer>
+      {!isLoading && (
+        <S.SocialContainer>
+          <li>
+            <S.SocialLink target="_blank" href={dev.whatsapp_url}>
+              <BsWhatsapp size={24} />
+            </S.SocialLink>
+          </li>
+          <li>
+            <S.SocialLink target="_blank" href={dev.linkedin_url}>
+              <BsLinkedin size={24} />
+            </S.SocialLink>
+          </li>
+          <li>
+            <S.SocialLink target="_blank" href={dev.email_url}>
+              <BsEnvelopeFill size={24} />
+            </S.SocialLink>
+          </li>
+          <li>
+            <S.SocialLink target="_blank" href={dev.github_url}>
+              <BsGithub size={24} />
+            </S.SocialLink>
+          </li>
+        </S.SocialContainer>
+      )}
     </S.Footer>
   )
 }

@@ -1,10 +1,12 @@
 import { useTransition } from 'react'
-import { CustomLink } from '../Links'
+import { useRouter } from 'next/navigation'
+
+import { useLocale } from 'next-intl'
+
+import { CustomLink } from '@/components/Links'
+import { useDeveloperData } from '@/hooks/useDeveloperData'
 
 import * as s from './styles'
-import { useLocale } from 'next-intl'
-import { useRouter } from 'next/navigation'
-import { Dev } from '@/models/developer'
 
 type Props = {
   themeSwitch: () => void
@@ -15,6 +17,8 @@ export const Header = (props: Props) => {
   const [isPending, startTransition] = useTransition()
   const router = useRouter()
   const localActive = useLocale()
+  const { isLoading, data } = useDeveloperData()
+  const dev = data ? data[0] : null
 
   const changeLocale = (newLocale: string) => {
     startTransition(() => {
@@ -24,9 +28,11 @@ export const Header = (props: Props) => {
 
   return (
     <s.Header>
-      <CustomLink url="/" linkType="logo">
-        {Dev.full_name}
-      </CustomLink>
+      {!isLoading && (
+        <CustomLink url="/" linkType="logo">
+          {dev.full_name}
+        </CustomLink>
+      )}
       <s.SwitchersContainer>
         {localActive === 'en' ? (
           <s.Switcher

@@ -1,12 +1,11 @@
 import Link from 'next/link'
 import { useEffect, useState } from 'react'
 
-import { Button } from '../Buttons'
-
 import { BsFillXCircleFill } from 'react-icons/bs'
 
-import { Projects } from '@/models/projects'
-import { Freelances } from '@/models/freelances'
+import { Button } from '@/components/Buttons'
+import { useProjectData } from '@/hooks/useProjectData'
+import { useFreelanceData } from '@/hooks/useFreelanceData'
 
 import * as S from './styles'
 
@@ -16,11 +15,14 @@ type Props = {
 }
 
 export const Modal = ({ modalHandler, projectId }: Props) => {
+  const { isLoading: isLoadingProjects, data: projectsData } = useProjectData()
+  const { isLoading: isLoadingFreelances, data: freelancesData } =
+    useFreelanceData()
   const [filteredItem, setFilteredItem] = useState([])
 
   const filterItem = (id: string) => {
-    const project = Projects.find((item) => item.id === id)
-    const freelance = Freelances.find((item) => item.id === id)
+    const project = projectsData.find((item) => item.id === id)
+    const freelance = freelancesData.find((item) => item.id === id)
 
     if (project) {
       setFilteredItem(project)
@@ -53,19 +55,21 @@ export const Modal = ({ modalHandler, projectId }: Props) => {
           <h5>Links</h5>
           <div>
             <S.ModalLinks>
-              <Link
-                target="_blank"
-                href={
-                  filteredItem.repo_url
-                    ? filteredItem.repo_url
-                    : 'https://github.com/Raul-Albuquerque'
-                }
-              >
-                <img
-                  src="https://skillicons.dev/icons?i=github"
-                  alt="Acessar o repositório no Github"
-                />
-              </Link>
+              {filteredItem.repo_url && (
+                <Link
+                  target="_blank"
+                  href={
+                    filteredItem.repo_url
+                      ? filteredItem.repo_url
+                      : 'https://github.com/Raul-Albuquerque'
+                  }
+                >
+                  <img
+                    src="https://skillicons.dev/icons?i=github"
+                    alt="Acessar o repositório no Github"
+                  />
+                </Link>
+              )}
             </S.ModalLinks>
             <Button
               type="tertiary"
