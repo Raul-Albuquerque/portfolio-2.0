@@ -56,7 +56,7 @@
 The application has two features to render the data:
     
 - Getting your data from a [Static File](#static-file)
-- Getting your data from a [API Rest](#api-rest)
+- Getting your data from a [API REST](#api-rest)
 
 ### Static file
 
@@ -91,11 +91,11 @@ The application has two features to render the data:
     ```
 7. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-### API Rest
+### API REST
 
-In order to get your data from a API Rest you have to use the rest-api branch.
+In order to get your data from an API REST you have to use the "rest-api" branch.
 
-1. **Clone the rest-api branch**
+1. **Clone the "rest-api" branch**
 
     ```shell
     git clone git@github.com:Raul-Albuquerque/portfolio-2.0.git . --branch 
@@ -111,7 +111,7 @@ In order to get your data from a API Rest you have to use the rest-api branch.
 
     <img src="./github/images/services.png" />
 
-4. **Replace the baseURL within the index.ts file**
+4. **Replace the baseURL within index.ts file**
 
     ```javascript
     import axios from 'axios'
@@ -158,7 +158,9 @@ For more information of collaborations on the project, please contact [raulmalbu
 <hr>
 <br><br>
 
-# <img src="./github/icons/br.svg" /> Portfólio 
+<img src="./github/icons/br.svg" /> 
+
+# Portfólio
 Esse é o meu portfolio e ele foi desenvolvido com Next.js para aprimorar meus conhecimentos nesse framework.
 
 Esta aplicação tem diversas funcionalidades como temas claro e escuro, mudança de idioma entre inglês e português, layout responsivo e components com feedback visual.
@@ -202,7 +204,7 @@ Esta aplicação tem diversas funcionalidades como temas claro e escuro, mudanç
 A aplicação possui duas funcionalidades para renderizar os dados:
     
 - Consumindo dados de um [Arquivo Estático](#arquivo-estático)
-- Consumindo dados de uma [API Rest](#rest-api)
+- Consumindo dados de uma [API REST](#rest-api)
 
 ### Arquivo Estático
 
@@ -237,9 +239,9 @@ A aplicação possui duas funcionalidades para renderizar os dados:
     ```
 7. Abra [http://localhost:3000](http://localhost:3000) em seu browser.
 
-### Rest API
+### REST API
 
-Para exibir seus dados consumindo uma API Rest você tem que usar a branch "rest-api".
+Para exibir seus dados consumindo uma API REST você tem que usar a branch "rest-api".
 
 1. **Clone a branch "rest-api"**
 
@@ -279,7 +281,7 @@ Para exibir seus dados consumindo uma API Rest você tem que usar a branch "rest
     return response.data
     }
 
-    // Verifique se o endpoint da sua Rest API é igual ao endpoint dos seus hooks.
+    // Verifique se o endpoint da sua REST API é igual ao endpoint dos seus hooks.
     ``` 
 7. **Inicie o servidor de desenvolvimento**
 
