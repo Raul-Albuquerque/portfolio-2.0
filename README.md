@@ -74,7 +74,7 @@ The application has two features to render the data:
 
 3. **Access the models folder**
 
-    <img src="./github/images/models.jpg" /> 
+    <img src="./github/images/models.png" /> 
 
 4. **Update the models with your informations**
 
@@ -184,7 +184,7 @@ A aplicação possui duas funcionalidades para renderizar os dados:
 
 3. **Acesse a pasta models**
 
-    <img src="./github/images/models.jpg" /> 
+    <img src="./github/images/models.png" /> 
 
 4. **Atualize os modelos com suas informações**
 
