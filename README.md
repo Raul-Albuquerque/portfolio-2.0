@@ -91,7 +91,7 @@ The application has two features to render the data:
     ```
 7. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-<!-- ### API Rest
+### API Rest
 
 In order to get your data from a API Rest you have to use the rest-api branch.
 
@@ -105,6 +105,23 @@ In order to get your data from a API Rest you have to use the rest-api branch.
 
     ```shell
     npm install
+    ```
+
+3. **Access the hooks folder**
+
+    <img src="./github/images/hooks.png" />
+
+<!-- 4. **Replace the API_URL within the files**
+
+    ```javascript
+    
+    import { DeveloperResponse } from '@/interfaces/developer-data'
+    import { useQuery } from '@tanstack/react-query'
+    import axios from 'axios'
+
+    // Change here
+    
+
     ``` -->
 
 ## Contribution
