@@ -11,7 +11,9 @@
 - [Português](#portfólio)
 <br><br>
 
-# <img src="./github/icons/en.svg" /> Portfolio 
+<img align="right" src="./github/icons/en.svg" /> 
+
+# Portfolio 
 
 * This is my portfolio and it was developed with Next.js to improve my knowledges about this framework.
 
@@ -154,14 +156,14 @@ This project was created by [Raul Albuquerque](http://localhost:3000).
 
 ## Contact
 For more information of collaborations on the project, please contact [raulmalbuquerque2014@gmail.com](mailto:raulmalbuquerque2014@gmail.com).
-<br><br>
+<br>
 <hr>
 <br><br>
 
-<img src="./github/icons/br.svg" /> 
+<img align="right" src="./github/icons/br.svg" /> 
 
 # Portfólio
-Esse é o meu portfolio e ele foi desenvolvido com Next.js para aprimorar meus conhecimentos nesse framework.
+Esse é o meu portfólio e ele foi desenvolvido com Next.js para aprimorar meus conhecimentos nesse framework.
 
 Esta aplicação tem diversas funcionalidades como temas claro e escuro, mudança de idioma entre inglês e português, layout responsivo e components com feedback visual.
 
