@@ -1,7 +1,5 @@
 'use client'
 
-import { useState } from 'react'
-
 import { useLocale, useTranslations } from 'next-intl'
 
 import { Main } from '@/components/Main'
@@ -21,22 +19,17 @@ import { Projects } from '@/models/projects'
 import { Freelances } from '@/models/freelances'
 
 import { CardListContact, CardListContainer } from './styles'
+import { useModalStore } from '@/stores/modalStore'
 
 export type props = {
   type: 'projects' | 'freelances' | 'contacts'
 }
 
 export const CardList = ({ type }: props) => {
-  const [showModal, setShowModal] = useState(false)
-  const [modalId, setModalId] = useState('')
   const projects = useTranslations('Projects')
   const contacts = useTranslations('Contacts')
   const localActive = useLocale()
-
-  const handleModal = (id: string) => {
-    setShowModal(!showModal)
-    setModalId(id)
-  }
+  const isOpen = useModalStore((state) => state.isOpen)
 
   return (
     <>
@@ -49,8 +42,8 @@ export const CardList = ({ type }: props) => {
                   key={project.id}
                   type="project"
                   title={project.title}
-                  modalHandler={() => handleModal(project.id)}
                   imageUrl={project.image_url}
+                  projectId={project.id}
                   description={
                     localActive === 'en'
                       ? project.description
@@ -72,8 +65,8 @@ export const CardList = ({ type }: props) => {
                 key={freelance.id}
                 type="project"
                 title={freelance.title}
-                modalHandler={() => handleModal(freelance.id)}
                 imageUrl={freelance.image_url}
+                projectId={freelance.id}
                 description={
                   localActive === 'en'
                     ? freelance.description
@@ -121,7 +114,7 @@ export const CardList = ({ type }: props) => {
           </CardListContact>
         </Main>
       )}
-      {showModal && <Modal modalHandler={handleModal} projectId={modalId} />}
+      {isOpen && <Modal />}
     </>
   )
 }

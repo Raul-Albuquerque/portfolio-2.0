@@ -5,34 +5,36 @@ import { useTranslations } from 'next-intl'
 
 import { BsPlusCircleFill, BsGithub } from 'react-icons/bs'
 
-import { Button } from '../Buttons'
+import { Button } from '@/components/Buttons'
+import { useModalStore } from '@/stores/modalStore'
 
 import * as S from './styles'
 
 export type Props = {
   type: 'project' | 'contact'
   title?: string
-  modalHandler?: () => void
   imageUrl?: string
   description?: string
   icon?: React.ReactNode
   navigateTo?: string
   repourl?: string
   projecturl?: string
+  projectId?: string
 }
 
 export const Card = ({
   type,
   title,
-  modalHandler,
   imageUrl,
   description,
   icon,
   navigateTo,
+  projectId,
   repourl,
   projecturl,
 }: Props) => {
   const project = useTranslations('Projects')
+  const modal = useModalStore()
 
   return (
     <>
@@ -47,7 +49,10 @@ export const Card = ({
           )}
           <S.ActionsContainer>
             <S.IconsContainer>
-              <BsPlusCircleFill size={24} onClick={modalHandler} />
+              <BsPlusCircleFill
+                size={24}
+                onClick={() => modal.openModal(projectId ?? '')}
+              />
               {repourl && (
                 <S.ActionIcon target="_blank" href={repourl}>
                   <BsGithub size={24} />

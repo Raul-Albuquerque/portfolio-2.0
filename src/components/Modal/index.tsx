@@ -7,13 +7,9 @@ import { BsFillXCircleFill } from 'react-icons/bs'
 
 import { Projects } from '@/models/projects'
 import { Freelances } from '@/models/freelances'
+import { useModalStore } from '@/stores/modalStore'
 
 import * as S from './styles'
-
-type Props = {
-  modalHandler: (id?: string) => void
-  projectId: string
-}
 
 type FilteredItem = {
   title: string
@@ -23,7 +19,8 @@ type FilteredItem = {
   id: string
 }
 
-export const Modal = ({ modalHandler, projectId }: Props) => {
+export const Modal = () => {
+  const modal = useModalStore()
   const [filteredItem, setFilteredItem] = useState<FilteredItem>({
     title: '',
     techs: '',
@@ -44,17 +41,15 @@ export const Modal = ({ modalHandler, projectId }: Props) => {
   }
 
   useEffect(() => {
-    filterItem(projectId)
+    filterItem(modal.itemId)
   })
 
-  console.log(filteredItem.id)
-
   return (
-    <S.ModalOverlay onClick={modalHandler}>
+    <S.ModalOverlay onClick={modal.closeModal}>
       <S.ModalContainer>
         <S.ModalTitle>
           <h4>{filteredItem.title ? filteredItem.title : 'titulo'}</h4>
-          <BsFillXCircleFill height={20} onClick={modalHandler} />
+          <BsFillXCircleFill height={20} onClick={modal.closeModal} />
         </S.ModalTitle>
         <S.ModalContent>
           <h5>Techs</h5>
