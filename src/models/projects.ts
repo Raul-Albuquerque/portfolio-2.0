@@ -13,8 +13,22 @@ export interface Project {
 export const Projects: Project[] = [
   {
     id: '1',
-    title: 'Pokédex',
+    title: 'Código Certo',
     image_url: '/static/projects/1.png',
+    description:
+      'Landing Page developed for the Código Certo community, where I worked as a tech lead.',
+    descricao:
+      'Landing Page desenvolvida para a comunidade Código Certo, onde atuei como techlead.',
+    techs: 'figma,html,css,js,bootstrap,nodejs,prisma,sqlite,cypress',
+    deploy_url: 'https://equipe04.vercel.app/',
+    repo_url: 'https://github.com/Raul-Albuquerque/equipe04',
+    layout_url:
+      'https://www.figma.com/design/G9aAaq7RO2CaD3dxdAf4rm/Landing-Page----C%C3%B3digo-Certo?node-id=434-134&t=Ca9p6xUSTsON92K2-1',
+  },
+  {
+    id: '2',
+    title: 'Pokédex',
+    image_url: '/static/projects/2.png',
     description:
       'Web Application about Pokémons with a lot of features, using the PokéAPI.',
     descricao:
@@ -24,9 +38,9 @@ export const Projects: Project[] = [
     repo_url: 'https://github.com/Raul-Albuquerque/desafio-pokedex',
   },
   {
-    id: '2',
+    id: '3',
     title: 'Y - Twitter Clone',
-    image_url: '/static/projects/2.png',
+    image_url: '/static/projects/3.png',
     description:
       'This is a robust project that replicates various functionalities of Twitter.',
     descricao:
@@ -34,19 +48,5 @@ export const Projects: Project[] = [
     techs: 'html,css,py,django,postgres,docker',
     deploy_url: 'http://raulalbuquerque.pythonanywhere.com/',
     repo_url: 'https://github.com/Raul-Albuquerque/Y_twitter_clone',
-  },
-  {
-    id: '3',
-    title: 'My Contacts',
-    image_url: '/static/projects/3.png',
-    description:
-      'Sort of an agenda that allows the user to add name, e-mail, phone, and avatar.',
-    descricao:
-      'Uma espécie de agenda que permite o usuário adicionar nome, e-mail, telefone e avatar.',
-    techs: 'html,css,ts,react',
-    deploy_url: 'https://meus-contatos-react-seven.vercel.app/',
-    repo_url: 'https://github.com/Raul-Albuquerque/meus_contatos_react',
-    layout_url:
-      'https://www.figma.com/file/YsfBsQ2APXN3CiJ94YQjPh/meus-contatos?type=design&node-id=0%3A1&mode=design&t=wyFMAJmZiQCmdLRA-1',
-  },
+  }
 ]
