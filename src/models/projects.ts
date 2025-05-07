@@ -48,5 +48,5 @@ export const Projects: Project[] = [
     techs: 'html,css,py,django,postgres,docker',
     deploy_url: 'http://raulalbuquerque.pythonanywhere.com/',
     repo_url: 'https://github.com/Raul-Albuquerque/Y_twitter_clone',
-  }
+  },
 ]
